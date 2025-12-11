@@ -7,12 +7,19 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
       },
     },
     extend: {
+      fontFamily: {
+        headline: ['Merriweather', 'Georgia', 'serif'],
+        body: ['Source Sans 3', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +54,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        news: {
+          headline: "hsl(var(--news-headline))",
+          subhead: "hsl(var(--news-subhead))",
+          body: "hsl(var(--news-body))",
+          caption: "hsl(var(--news-caption))",
+          divider: "hsl(var(--news-divider))",
+          sidebar: "hsl(var(--news-sidebar-bg))",
+          nav: "hsl(var(--news-nav-bg))",
+          "nav-text": "hsl(var(--news-nav-text))",
+          tag: "hsl(var(--news-tag-bg))",
+          "tag-text": "hsl(var(--news-tag-text))",
+          link: "hsl(var(--news-link))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,20 +85,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
