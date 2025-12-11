@@ -21,7 +21,7 @@ export function VideoPlaceholder({ imageUrl, caption }: VideoPlaceholderProps) {
               <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors shadow-lg">
                 <Play className="w-8 h-8 text-primary-foreground ml-1" />
               </div>
-              <p className="text-sm text-muted-foreground">Voir la vidéo</p>
+              <p className="text-sm text-muted-foreground">Watch video</p>
             </div>
           </div>
         )}
@@ -34,7 +34,7 @@ export function VideoPlaceholder({ imageUrl, caption }: VideoPlaceholderProps) {
         )}
         <div className="absolute top-3 left-3">
           <span className="bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-sm">
-            VIDÉO
+            VIDEO
           </span>
         </div>
       </div>

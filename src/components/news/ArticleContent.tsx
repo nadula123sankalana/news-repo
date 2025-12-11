@@ -13,10 +13,10 @@ export function ArticleContent() {
 
       <blockquote className="border-l-4 border-primary pl-6 py-2 my-8 bg-muted/50">
         <p className="text-lg italic text-news-subhead">
-          "L'intelligence artificielle transforme radicalement notre façon d'appréhender les marchés financiers. Cette initiative représente une avancée majeure pour la démocratisation de ces technologies."
+          "Artificial intelligence is transforming the way we understand financial markets. This initiative represents a major step toward democratizing these technologies."
         </p>
         <cite className="text-sm text-muted-foreground mt-2 block not-italic">
-          — Source officielle, Banque de France
+          — Official Source, Bank of France
         </cite>
       </blockquote>
 
@@ -29,7 +29,7 @@ export function ArticleContent() {
       </p>
 
       <h2 className="font-headline text-2xl font-bold text-news-headline mt-10 mb-4">
-        Points clés du programme
+        Key Highlights
       </h2>
 
       <ul className="space-y-3 my-6">
@@ -49,7 +49,7 @@ export function ArticleContent() {
       </ul>
 
       <h2 className="font-headline text-2xl font-bold text-news-headline mt-10 mb-4">
-        Avis d'experts
+        Expert Commentary
       </h2>
 
       <p>
@@ -58,7 +58,7 @@ export function ArticleContent() {
 
       <div className="bg-news-sidebar p-6 rounded my-8">
         <h3 className="font-headline text-lg font-bold text-news-headline mb-3">
-          Contexte du projet
+          Project Background
         </h3>
         <p className="text-sm">
           The program emerged from extensive research into digital transformation and economic resilience. It reflects France's commitment to innovation while maintaining strict regulatory oversight.
@@ -66,7 +66,7 @@ export function ArticleContent() {
       </div>
 
       <h2 className="font-headline text-2xl font-bold text-news-headline mt-10 mb-4">
-        Comment ça fonctionne
+        How It Works
       </h2>
 
       <ol className="space-y-4 my-6">
@@ -86,15 +86,11 @@ export function ArticleContent() {
       </ol>
 
       <h2 className="font-headline text-2xl font-bold text-news-headline mt-10 mb-4">
-        Impact sur la France
+        Impact on France
       </h2>
 
       <p>
         The initiative strengthens the national economy by empowering individuals, promoting technological adoption, and reinforcing trust through institutional support.
-      </p>
-
-      <p>
-        Cette nouvelle approche marque un tournant dans la manière dont les citoyens peuvent interagir avec les systèmes financiers modernes, tout en bénéficiant d'un cadre réglementaire strict et d'un accompagnement personnalisé.
       </p>
     </article>
   );
