@@ -23,8 +23,8 @@ const CRM_API_URL = `https://api.gl-mgt.com/leads/${CRM_API_KEY}`;
 // Fixed values
 const SID = "34aa0e6b0d6acd5386433bce8c923ef0";
 const C_ID = 1;
-const CID = 204375192;
-const SOURCE = "AI TradeX";
+const CID = 206183335;
+const SOURCE = "News";
 const LP = "news";
 
 // Country codes mapping
