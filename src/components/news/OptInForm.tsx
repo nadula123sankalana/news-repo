@@ -25,7 +25,7 @@ const SID = "34aa0e6b0d6acd5386433bce8c923ef0";
 const C_ID = 1;
 const CID = 204375192;
 const SOURCE = "AI TradeX";
-const LP = "/";
+const LP = "news";
 
 // Country codes mapping
 const countryCodes = [
