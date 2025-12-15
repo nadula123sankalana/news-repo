@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { NewsHeader } from "@/components/news/NewsHeader";
 import { NewsFooter } from "@/components/news/NewsFooter";
 
 const ThankYou = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -28,21 +26,21 @@ const ThankYou = () => {
 
             {/* Main Heading */}
             <h1 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              {t("thankYou.title")}
+              Thank You!
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto leading-relaxed">
-              {t("thankYou.subtitle")}
+              Your registration has been successfully submitted.
             </p>
 
             {/* Description */}
             <div className="mt-8 p-6 md:p-8 bg-card border border-border rounded-lg shadow-sm">
               <p className="text-base md:text-lg text-foreground mb-4 leading-relaxed">
-                {t("thankYou.body")}
+                An official program consultant will contact you shortly to discuss your eligibility and next steps.
               </p>
               <p className="text-sm md:text-base text-muted-foreground">
-                {t("thankYou.note")}
+                Please check your email for a confirmation message and keep your phone nearby for our call.
               </p>
             </div>
 
@@ -53,7 +51,7 @@ const ThankYou = () => {
                 size="lg"
                 className="h-14 text-lg font-semibold px-8"
               >
-                {t("thankYou.button")}
+                Return to Home
               </Button>
             </div>
           </div>

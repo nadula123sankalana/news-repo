@@ -8,7 +8,7 @@ export function ArticleContent() {
 
   return (
     <article className="news-body space-y-6">
-      <p className="text-lg leading-relaxed first-letter:text-5xl first-letter:font-headline first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
+      <p className="text-lg leading-relaxed font-bold first-letter:text-5xl first-letter:font-headline first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
         {t("article.lead")}
       </p>
 

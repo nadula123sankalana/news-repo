@@ -109,7 +109,9 @@
 @layer components {
   .news-headline {
     font-family: var(--font-headline);
-    @apply text-news-headline font-bold leading-tight tracking-tight;
+    /* Use custom line-height to increase vertical spacing between lines */
+    @apply text-news-headline font-bold tracking-tight;
+    line-height: 1.35;
   }
 
   .news-subhead {
