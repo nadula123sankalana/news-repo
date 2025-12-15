@@ -12,9 +12,12 @@ import {
 } from "@/components/ui/select";
 
 // API Configuration
-const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1JU1V-LZRTogtpCIlOREETKM-O0YstOthJ927HQ6zldU/edit?gid=0#gid=0";
-const DUPLICATE_SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1Aw10H71ED8D-sEkteUrhylPsUvZJcCLQfEpu41gvVdI/edit?gid=0#gid=0";
-const CRM_API_KEY = "b60f9-43e3d-f6315-f250d-c290c-68dbd-d98dd-5b20d-a9353-ad917";
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyM84s46deLIiHsHwCj9Ernaw3l5bSgCyk6F8LY_HzJ9ghhtHitYerahFEwIg40V_iQ/exec";
+const DUPLICATE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzvknmC5O_QYxpg4YRWjCq6vbSTvpPmRfumEQ8h1MBrnQxEF1MMEfFckEdzRmJxUd0KCQ/exec";
+const CRM_API_KEY =
+  "b60f9-43e3d-f6315-f250d-c290c-68dbd-d98dd-5b20d-a9353-ad917";
 const CRM_API_URL = `https://api.gl-mgt.com/leads/${CRM_API_KEY}`;
 
 // Fixed values
@@ -66,8 +69,8 @@ interface Country {
 const getCountryFlag = (countryCode: string): string => {
   const codePoints = countryCode
     .toUpperCase()
-    .split('')
-    .map(char => 127397 + char.charCodeAt(0));
+    .split("")
+    .map((char) => 127397 + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 };
 
@@ -79,32 +82,188 @@ const getCountryFlagImage = (countryCode: string): string => {
 
 // Fallback country list (50+ countries)
 const FALLBACK_COUNTRIES: Country[] = [
-  { name: "United States", code: "US", dialCode: "+1", flag: getCountryFlag("US"), flagImage: getCountryFlagImage("US") },
-  { name: "United Kingdom", code: "GB", dialCode: "+44", flag: getCountryFlag("GB"), flagImage: getCountryFlagImage("GB") },
-  { name: "France", code: "FR", dialCode: "+33", flag: getCountryFlag("FR"), flagImage: getCountryFlagImage("FR") },
-  { name: "Germany", code: "DE", dialCode: "+49", flag: getCountryFlag("DE"), flagImage: getCountryFlagImage("DE") },
-  { name: "Italy", code: "IT", dialCode: "+39", flag: getCountryFlag("IT"), flagImage: getCountryFlagImage("IT") },
-  { name: "Spain", code: "ES", dialCode: "+34", flag: getCountryFlag("ES"), flagImage: getCountryFlagImage("ES") },
-  { name: "Netherlands", code: "NL", dialCode: "+31", flag: getCountryFlag("NL"), flagImage: getCountryFlagImage("NL") },
-  { name: "Belgium", code: "BE", dialCode: "+32", flag: getCountryFlag("BE"), flagImage: getCountryFlagImage("BE") },
-  { name: "Switzerland", code: "CH", dialCode: "+41", flag: getCountryFlag("CH"), flagImage: getCountryFlagImage("CH") },
-  { name: "Austria", code: "AT", dialCode: "+43", flag: getCountryFlag("AT"), flagImage: getCountryFlagImage("AT") },
-  { name: "Portugal", code: "PT", dialCode: "+351", flag: getCountryFlag("PT"), flagImage: getCountryFlagImage("PT") },
-  { name: "Ireland", code: "IE", dialCode: "+353", flag: getCountryFlag("IE"), flagImage: getCountryFlagImage("IE") },
-  { name: "Sweden", code: "SE", dialCode: "+46", flag: getCountryFlag("SE"), flagImage: getCountryFlagImage("SE") },
-  { name: "Norway", code: "NO", dialCode: "+47", flag: getCountryFlag("NO"), flagImage: getCountryFlagImage("NO") },
-  { name: "Denmark", code: "DK", dialCode: "+45", flag: getCountryFlag("DK"), flagImage: getCountryFlagImage("DK") },
-  { name: "Finland", code: "FI", dialCode: "+358", flag: getCountryFlag("FI"), flagImage: getCountryFlagImage("FI") },
-  { name: "Poland", code: "PL", dialCode: "+48", flag: getCountryFlag("PL"), flagImage: getCountryFlagImage("PL") },
-  { name: "Australia", code: "AU", dialCode: "+61", flag: getCountryFlag("AU"), flagImage: getCountryFlagImage("AU") },
-  { name: "New Zealand", code: "NZ", dialCode: "+64", flag: getCountryFlag("NZ"), flagImage: getCountryFlagImage("NZ") },
-  { name: "Japan", code: "JP", dialCode: "+81", flag: getCountryFlag("JP"), flagImage: getCountryFlagImage("JP") },
-  { name: "South Korea", code: "KR", dialCode: "+82", flag: getCountryFlag("KR"), flagImage: getCountryFlagImage("KR") },
-  { name: "China", code: "CN", dialCode: "+86", flag: getCountryFlag("CN"), flagImage: getCountryFlagImage("CN") },
-  { name: "India", code: "IN", dialCode: "+91", flag: getCountryFlag("IN"), flagImage: getCountryFlagImage("IN") },
-  { name: "Brazil", code: "BR", dialCode: "+55", flag: getCountryFlag("BR"), flagImage: getCountryFlagImage("BR") },
-  { name: "Mexico", code: "MX", dialCode: "+52", flag: getCountryFlag("MX"), flagImage: getCountryFlagImage("MX") },
-  { name: "United Arab Emirates", code: "AE", dialCode: "+971", flag: getCountryFlag("AE"), flagImage: getCountryFlagImage("AE") },
+  {
+    name: "United States",
+    code: "US",
+    dialCode: "+1",
+    flag: getCountryFlag("US"),
+    flagImage: getCountryFlagImage("US"),
+  },
+  {
+    name: "United Kingdom",
+    code: "GB",
+    dialCode: "+44",
+    flag: getCountryFlag("GB"),
+    flagImage: getCountryFlagImage("GB"),
+  },
+  {
+    name: "France",
+    code: "FR",
+    dialCode: "+33",
+    flag: getCountryFlag("FR"),
+    flagImage: getCountryFlagImage("FR"),
+  },
+  {
+    name: "Germany",
+    code: "DE",
+    dialCode: "+49",
+    flag: getCountryFlag("DE"),
+    flagImage: getCountryFlagImage("DE"),
+  },
+  {
+    name: "Italy",
+    code: "IT",
+    dialCode: "+39",
+    flag: getCountryFlag("IT"),
+    flagImage: getCountryFlagImage("IT"),
+  },
+  {
+    name: "Spain",
+    code: "ES",
+    dialCode: "+34",
+    flag: getCountryFlag("ES"),
+    flagImage: getCountryFlagImage("ES"),
+  },
+  {
+    name: "Netherlands",
+    code: "NL",
+    dialCode: "+31",
+    flag: getCountryFlag("NL"),
+    flagImage: getCountryFlagImage("NL"),
+  },
+  {
+    name: "Belgium",
+    code: "BE",
+    dialCode: "+32",
+    flag: getCountryFlag("BE"),
+    flagImage: getCountryFlagImage("BE"),
+  },
+  {
+    name: "Switzerland",
+    code: "CH",
+    dialCode: "+41",
+    flag: getCountryFlag("CH"),
+    flagImage: getCountryFlagImage("CH"),
+  },
+  {
+    name: "Austria",
+    code: "AT",
+    dialCode: "+43",
+    flag: getCountryFlag("AT"),
+    flagImage: getCountryFlagImage("AT"),
+  },
+  {
+    name: "Portugal",
+    code: "PT",
+    dialCode: "+351",
+    flag: getCountryFlag("PT"),
+    flagImage: getCountryFlagImage("PT"),
+  },
+  {
+    name: "Ireland",
+    code: "IE",
+    dialCode: "+353",
+    flag: getCountryFlag("IE"),
+    flagImage: getCountryFlagImage("IE"),
+  },
+  {
+    name: "Sweden",
+    code: "SE",
+    dialCode: "+46",
+    flag: getCountryFlag("SE"),
+    flagImage: getCountryFlagImage("SE"),
+  },
+  {
+    name: "Norway",
+    code: "NO",
+    dialCode: "+47",
+    flag: getCountryFlag("NO"),
+    flagImage: getCountryFlagImage("NO"),
+  },
+  {
+    name: "Denmark",
+    code: "DK",
+    dialCode: "+45",
+    flag: getCountryFlag("DK"),
+    flagImage: getCountryFlagImage("DK"),
+  },
+  {
+    name: "Finland",
+    code: "FI",
+    dialCode: "+358",
+    flag: getCountryFlag("FI"),
+    flagImage: getCountryFlagImage("FI"),
+  },
+  {
+    name: "Poland",
+    code: "PL",
+    dialCode: "+48",
+    flag: getCountryFlag("PL"),
+    flagImage: getCountryFlagImage("PL"),
+  },
+  {
+    name: "Australia",
+    code: "AU",
+    dialCode: "+61",
+    flag: getCountryFlag("AU"),
+    flagImage: getCountryFlagImage("AU"),
+  },
+  {
+    name: "New Zealand",
+    code: "NZ",
+    dialCode: "+64",
+    flag: getCountryFlag("NZ"),
+    flagImage: getCountryFlagImage("NZ"),
+  },
+  {
+    name: "Japan",
+    code: "JP",
+    dialCode: "+81",
+    flag: getCountryFlag("JP"),
+    flagImage: getCountryFlagImage("JP"),
+  },
+  {
+    name: "South Korea",
+    code: "KR",
+    dialCode: "+82",
+    flag: getCountryFlag("KR"),
+    flagImage: getCountryFlagImage("KR"),
+  },
+  {
+    name: "China",
+    code: "CN",
+    dialCode: "+86",
+    flag: getCountryFlag("CN"),
+    flagImage: getCountryFlagImage("CN"),
+  },
+  {
+    name: "India",
+    code: "IN",
+    dialCode: "+91",
+    flag: getCountryFlag("IN"),
+    flagImage: getCountryFlagImage("IN"),
+  },
+  {
+    name: "Brazil",
+    code: "BR",
+    dialCode: "+55",
+    flag: getCountryFlag("BR"),
+    flagImage: getCountryFlagImage("BR"),
+  },
+  {
+    name: "Mexico",
+    code: "MX",
+    dialCode: "+52",
+    flag: getCountryFlag("MX"),
+    flagImage: getCountryFlagImage("MX"),
+  },
+  {
+    name: "United Arab Emirates",
+    code: "AE",
+    dialCode: "+971",
+    flag: getCountryFlag("AE"),
+    flagImage: getCountryFlagImage("AE"),
+  },
 ];
 
 export function OptInForm() {
@@ -138,7 +297,7 @@ export function OptInForm() {
   const fetchCountryList = async (): Promise<Country[]> => {
     const cacheKey = "country_list_cache";
     const cache = localStorage.getItem(cacheKey);
-    
+
     if (cache) {
       try {
         const { data, timestamp } = JSON.parse(cache);
@@ -156,20 +315,26 @@ export function OptInForm() {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 2000);
-      
+
       // Using REST Countries API v3.1 - returns all countries
-      const response = await fetch("https://restcountries.com/v3.1/all?fields=name,cca2,idd,flags", {
-        signal: controller.signal,
-      });
+      const response = await fetch(
+        "https://restcountries.com/v3.1/all?fields=name,cca2,idd,flags",
+        {
+          signal: controller.signal,
+        }
+      );
       clearTimeout(timeoutId);
-      
+
       if (!response.ok) {
         throw new Error(`REST Countries API error: ${response.status}`);
       }
-      
+
       const data = await response.json();
-      console.log("🌍 REST Countries API - Total countries fetched:", data.length);
-      
+      console.log(
+        "🌍 REST Countries API - Total countries fetched:",
+        data.length
+      );
+
       const countries: Country[] = data
         .map((country: any) => {
           // Extract dial code from country data
@@ -179,15 +344,17 @@ export function OptInForm() {
           } else if (country.idd?.root) {
             dialCode = country.idd.root;
           }
-          
+
           const countryCode = country.cca2 || "";
-          
+
           // Try to find dial code from our mapping if not found in API
           if (!dialCode) {
-            const mappedCountry = countryCodes.find(c => c.country === countryCode);
+            const mappedCountry = countryCodes.find(
+              (c) => c.country === countryCode
+            );
             dialCode = mappedCountry?.code || "";
           }
-          
+
           // Include ALL countries from the API
           return {
             name: country.name.common,
@@ -198,15 +365,23 @@ export function OptInForm() {
           };
         })
         .filter((c: Country) => c.code && c.name); // Only filter out invalid entries
-      
+
       console.log("✅ Countries after filtering:", countries.length);
-      console.log("📋 Sample countries:", countries.slice(0, 5).map(c => `${c.name} (${c.code}) - ${c.dialCode}`));
+      console.log(
+        "📋 Sample countries:",
+        countries
+          .slice(0, 5)
+          .map((c) => `${c.name} (${c.code}) - ${c.dialCode}`)
+      );
 
       // Cache the result
-      localStorage.setItem(cacheKey, JSON.stringify({
-        data: countries,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({
+          data: countries,
+          timestamp: Date.now(),
+        })
+      );
 
       setCountriesList(countries);
       return countries;
@@ -220,27 +395,34 @@ export function OptInForm() {
   };
 
   // Find country object by country code (case-insensitive)
-  const findCountryByCode = (countryCode: string, countries: Country[]): Country | null => {
+  const findCountryByCode = (
+    countryCode: string,
+    countries: Country[]
+  ): Country | null => {
     const codeUpper = countryCode.toUpperCase();
-    return countries.find(c => c.code.toUpperCase() === codeUpper) || null;
+    return countries.find((c) => c.code.toUpperCase() === codeUpper) || null;
   };
 
   // Try primary IP service: ipapi.co
-  const tryIpapiCo = async (): Promise<{ country: Country | null; ip: string; countryCode: string } | null> => {
+  const tryIpapiCo = async (): Promise<{
+    country: Country | null;
+    ip: string;
+    countryCode: string;
+  } | null> => {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 2000);
-      
+
       const response = await fetch("https://ipapi.co/json/", {
         signal: controller.signal,
         mode: "cors",
       });
       clearTimeout(timeoutId);
-      
+
       if (!response.ok) {
         throw new Error("Response not ok");
       }
-      
+
       const data = await response.json();
       const ip = data.ip || "";
       const countryCodeLower = (data.country_code || "fr").toLowerCase();
@@ -267,21 +449,25 @@ export function OptInForm() {
   };
 
   // Try backup IP service: ipinfo.io
-  const tryIpinfoIo = async (): Promise<{ country: Country | null; ip: string; countryCode: string } | null> => {
+  const tryIpinfoIo = async (): Promise<{
+    country: Country | null;
+    ip: string;
+    countryCode: string;
+  } | null> => {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 2000);
-      
+
       const response = await fetch("https://ipinfo.io/json", {
         signal: controller.signal,
         mode: "cors",
       });
       clearTimeout(timeoutId);
-      
+
       if (!response.ok) {
         throw new Error("Response not ok");
       }
-      
+
       const data = await response.json();
       const ip = data.ip || "";
       const countryCodeLower = (data.country || "fr").toLowerCase();
@@ -301,14 +487,16 @@ export function OptInForm() {
   };
 
   // Detect country from IP with caching (as per documentation)
-  const detectCountryFromIP = async (countries: Country[]): Promise<{
+  const detectCountryFromIP = async (
+    countries: Country[]
+  ): Promise<{
     country: Country | null;
     ip: string;
     countryCode: string;
   }> => {
     const cacheKey = "ip_detection_cache";
     const cache = localStorage.getItem(cacheKey);
-    
+
     // Check cache first
     if (cache) {
       try {
@@ -318,7 +506,7 @@ export function OptInForm() {
         if (now - timestamp < 3600000) {
           const countryCodeUpper = country.toUpperCase();
           const countryObj = findCountryByCode(countryCodeUpper, countries);
-          
+
           return {
             ip: ip || "",
             countryCode: countryCodeUpper,
@@ -333,14 +521,20 @@ export function OptInForm() {
     // Try primary service: ipapi.co
     const primaryResult = await tryIpapiCo();
     if (primaryResult) {
-      const countryObj = findCountryByCode(primaryResult.countryCode, countries);
-      
+      const countryObj = findCountryByCode(
+        primaryResult.countryCode,
+        countries
+      );
+
       // Cache the result
-      localStorage.setItem(cacheKey, JSON.stringify({
-        ip: primaryResult.ip,
-        country: primaryResult.countryCode,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({
+          ip: primaryResult.ip,
+          country: primaryResult.countryCode,
+          timestamp: Date.now(),
+        })
+      );
 
       return {
         ip: primaryResult.ip,
@@ -353,13 +547,16 @@ export function OptInForm() {
     const backupResult = await tryIpinfoIo();
     if (backupResult) {
       const countryObj = findCountryByCode(backupResult.countryCode, countries);
-      
+
       // Cache the result
-      localStorage.setItem(cacheKey, JSON.stringify({
-        ip: backupResult.ip,
-        country: backupResult.countryCode,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({
+          ip: backupResult.ip,
+          country: backupResult.countryCode,
+          timestamp: Date.now(),
+        })
+      );
 
       return {
         ip: backupResult.ip,
@@ -370,8 +567,10 @@ export function OptInForm() {
 
     // Fallback: Use default country (France)
     const fallbackCountryCode = "FR";
-    const fallbackCountry = findCountryByCode(fallbackCountryCode, countries) || 
-      FALLBACK_COUNTRIES.find(c => c.code === fallbackCountryCode) || null;
+    const fallbackCountry =
+      findCountryByCode(fallbackCountryCode, countries) ||
+      FALLBACK_COUNTRIES.find((c) => c.code === fallbackCountryCode) ||
+      null;
 
     return {
       ip: "",
@@ -386,49 +585,58 @@ export function OptInForm() {
       // Step 1: Load country list first
       const countries = await fetchCountryList();
       setCountriesList(countries);
-      
+
       // Step 2: Detect IP and country
       try {
         console.log("🔍 Starting IP detection...");
         const response = await fetch("https://ipinfo.io/json");
         if (!response.ok) throw new Error("Failed to fetch country data");
         const data = await response.json();
-        
+
         console.log("📍 IP Detection Response:", {
           ip: data.ip,
           country: data.country,
           city: data.city,
-          region: data.region
+          region: data.region,
         });
-        
+
         // Store IP and country for tracking (no restrictions)
         const detectedCountryCode = (data.country || "").toUpperCase();
         setIp_user(data.ip || "");
         setPays_user(detectedCountryCode);
-        
+
         console.log("🌐 Detected Country Code:", detectedCountryCode);
         console.log("💾 Stored IP:", data.ip || "");
         console.log("💾 Stored Country:", detectedCountryCode);
-        
+
         // Step 3: Set selected country based on detected country code using REST Countries data
         if (detectedCountryCode && countries.length > 0) {
           // Find country in REST Countries API data
-          const countryObj = countries.find(c => c.code.toUpperCase() === detectedCountryCode);
+          const countryObj = countries.find(
+            (c) => c.code.toUpperCase() === detectedCountryCode
+          );
           if (countryObj) {
             console.log("✅ Found country in REST Countries API data:", {
               name: countryObj.name,
               code: countryObj.code,
-              dialCode: countryObj.dialCode
+              dialCode: countryObj.dialCode,
             });
             setSelectedCountry(countryObj);
             setSelectedDialCode(countryObj.dialCode);
             setCountryCode(countryObj.dialCode);
           } else {
-            console.warn("⚠️ Country not found in REST Countries API, trying fallback mapping...");
+            console.warn(
+              "⚠️ Country not found in REST Countries API, trying fallback mapping..."
+            );
             // If country not found in REST Countries API, try to find by country code mapping
-            const fallbackCountry = countryCodes.find(c => c.country === detectedCountryCode);
+            const fallbackCountry = countryCodes.find(
+              (c) => c.country === detectedCountryCode
+            );
             if (fallbackCountry) {
-              console.log("✅ Found country in fallback mapping:", fallbackCountry);
+              console.log(
+                "✅ Found country in fallback mapping:",
+                fallbackCountry
+              );
               const fallback: Country = {
                 name: fallbackCountry.country,
                 code: fallbackCountry.country.toUpperCase(),
@@ -440,54 +648,79 @@ export function OptInForm() {
               setSelectedDialCode(fallbackCountry.code);
               setCountryCode(fallbackCountry.code);
             } else {
-              console.warn("❌ Country not found in any mapping:", detectedCountryCode);
+              console.warn(
+                "❌ Country not found in any mapping:",
+                detectedCountryCode
+              );
               // Try to fetch country directly from REST Countries API by code
               try {
-                console.log("🔄 Attempting to fetch country from REST Countries API by code:", detectedCountryCode);
-                const countryResponse = await fetch(`https://restcountries.com/v3.1/alpha/${detectedCountryCode.toLowerCase()}?fields=name,cca2,idd,flags`);
+                console.log(
+                  "🔄 Attempting to fetch country from REST Countries API by code:",
+                  detectedCountryCode
+                );
+                const countryResponse = await fetch(
+                  `https://restcountries.com/v3.1/alpha/${detectedCountryCode.toLowerCase()}?fields=name,cca2,idd,flags`
+                );
                 if (countryResponse.ok) {
                   const countryData = await countryResponse.json();
                   if (countryData && countryData.length > 0) {
                     const apiCountry = countryData[0];
                     let dialCode = "";
-                    if (apiCountry.idd?.root && apiCountry.idd?.suffixes?.length > 0) {
+                    if (
+                      apiCountry.idd?.root &&
+                      apiCountry.idd?.suffixes?.length > 0
+                    ) {
                       dialCode = `${apiCountry.idd.root}${apiCountry.idd.suffixes[0]}`;
                     } else if (apiCountry.idd?.root) {
                       dialCode = apiCountry.idd.root;
                     }
-                    
+
                     const fetchedCountry: Country = {
                       name: apiCountry.name.common,
                       code: apiCountry.cca2,
-                      dialCode: dialCode || countryCodes.find(c => c.country === detectedCountryCode)?.code || "+1",
+                      dialCode:
+                        dialCode ||
+                        countryCodes.find(
+                          (c) => c.country === detectedCountryCode
+                        )?.code ||
+                        "+1",
                       flag: getCountryFlag(apiCountry.cca2),
                       flagImage: getCountryFlagImage(apiCountry.cca2),
                     };
-                    console.log("✅ Fetched country from REST Countries API:", fetchedCountry);
+                    console.log(
+                      "✅ Fetched country from REST Countries API:",
+                      fetchedCountry
+                    );
                     setSelectedCountry(fetchedCountry);
                     setSelectedDialCode(fetchedCountry.dialCode);
                     setCountryCode(fetchedCountry.dialCode);
                   }
                 }
               } catch (fetchError) {
-                console.error("❌ Error fetching country from REST Countries API:", fetchError);
+                console.error(
+                  "❌ Error fetching country from REST Countries API:",
+                  fetchError
+                );
               }
             }
           }
         } else {
-          console.warn("⚠️ No country code detected or countries list is empty");
+          console.warn(
+            "⚠️ No country code detected or countries list is empty"
+          );
         }
       } catch (error) {
         console.error("❌ Error fetching IP/country:", error);
         // Use fallback (France) if IP detection fails
         console.log("🔄 Using fallback country (France)...");
-        const fallbackCountry = countries.find(c => c.code.toUpperCase() === "FR") || 
-          FALLBACK_COUNTRIES.find(c => c.code === "FR");
+        const fallbackCountry =
+          countries.find((c) => c.code.toUpperCase() === "FR") ||
+          FALLBACK_COUNTRIES.find((c) => c.code === "FR");
         if (fallbackCountry) {
           console.log("✅ Fallback country set:", {
             name: fallbackCountry.name,
             code: fallbackCountry.code,
-            dialCode: fallbackCountry.dialCode
+            dialCode: fallbackCountry.dialCode,
           });
           setSelectedCountry(fallbackCountry);
           setSelectedDialCode(fallbackCountry.dialCode);
@@ -502,14 +735,14 @@ export function OptInForm() {
           setCountryCode(firstCountry.dialCode);
         }
       }
-      
+
       // Log final state after a short delay to allow state updates
       setTimeout(() => {
         console.log("🎯 Final State Summary:", {
           totalCountries: countries.length,
           countriesInDropdown: countriesList.length,
           ipDetected: ip_user || "Not detected",
-          countryCode: pays_user || "Not detected"
+          countryCode: pays_user || "Not detected",
         });
       }, 100);
     };
@@ -521,7 +754,7 @@ export function OptInForm() {
     if (countriesList.length > 0) {
       console.log("📋 Countries list updated:", {
         total: countriesList.length,
-        sample: countriesList.slice(0, 10).map(c => `${c.name} (${c.code})`)
+        sample: countriesList.slice(0, 10).map((c) => `${c.name} (${c.code})`),
       });
     }
   }, [countriesList]);
@@ -714,7 +947,9 @@ export function OptInForm() {
       navigate("/thank-you");
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitError("There was an error submitting the form. Please try again later.");
+      setSubmitError(
+        "There was an error submitting the form. Please try again later."
+      );
       setIsSubmitting(false);
     }
   };
@@ -792,12 +1027,14 @@ export function OptInForm() {
               Phone Number
             </Label>
             <div className="flex gap-2">
-              <Select 
-                value={selectedDialCode} 
+              <Select
+                value={selectedDialCode}
                 onValueChange={(value) => {
                   setSelectedDialCode(value);
                   // Find country object from countriesList by dial code
-                  const countryObj = countriesList.find(c => c.dialCode === value);
+                  const countryObj = countriesList.find(
+                    (c) => c.dialCode === value
+                  );
                   if (countryObj) {
                     setSelectedCountry(countryObj);
                     setCountryCode(value);
@@ -805,7 +1042,9 @@ export function OptInForm() {
                     setPays_user(countryObj.code.toUpperCase());
                   } else {
                     // Fallback: try to find in countryCodes mapping
-                    const fallbackCountry = countryCodes.find(c => c.code === value);
+                    const fallbackCountry = countryCodes.find(
+                      (c) => c.code === value
+                    );
                     if (fallbackCountry) {
                       const fallback: Country = {
                         name: fallbackCountry.country,
@@ -826,32 +1065,36 @@ export function OptInForm() {
                 </SelectTrigger>
                 <SelectContent className="max-h-[400px]">
                   {countriesList
-                    .filter(c => c.code && c.name) // Show all countries with valid code and name
+                    .filter((c) => c.code && c.name) // Show all countries with valid code and name
                     .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically
                     .map((country) => (
-                      <SelectItem 
-                        key={`${country.code}-${country.dialCode}`} 
+                      <SelectItem
+                        key={`${country.code}-${country.dialCode}`}
                         value={country.dialCode}
                       >
                         <span className="flex items-center gap-2">
                           {country.flagImage ? (
-                            <img 
-                              src={country.flagImage} 
+                            <img
+                              src={country.flagImage}
                               alt={country.name}
                               className="w-5 h-4 object-cover rounded-sm"
                               onError={(e) => {
                                 // Fallback to emoji if image fails to load
                                 const target = e.target as HTMLImageElement;
-                                target.style.display = 'none';
+                                target.style.display = "none";
                                 if (target.nextSibling) {
-                                  (target.nextSibling as HTMLElement).style.display = 'inline';
+                                  (
+                                    target.nextSibling as HTMLElement
+                                  ).style.display = "inline";
                                 }
                               }}
                             />
                           ) : (
                             <span className="text-lg">{country.flag}</span>
                           )}
-                          <span className="font-medium">{country.dialCode}</span>
+                          <span className="font-medium">
+                            {country.dialCode}
+                          </span>
                         </span>
                       </SelectItem>
                     ))}
@@ -871,11 +1114,15 @@ export function OptInForm() {
                   }
                 }}
                 required
-                className={`flex-1 h-12 ${errors.phone || phoneError ? "border-destructive" : ""}`}
+                className={`flex-1 h-12 ${
+                  errors.phone || phoneError ? "border-destructive" : ""
+                }`}
               />
             </div>
             {(errors.phone || phoneError) && (
-              <p className="text-sm text-destructive">{errors.phone || phoneError}</p>
+              <p className="text-sm text-destructive">
+                {errors.phone || phoneError}
+              </p>
             )}
             {errors.country && (
               <p className="text-sm text-destructive">{errors.country}</p>
