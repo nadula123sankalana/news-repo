@@ -764,7 +764,7 @@ export function OptInForm() {
     const { name, value } = e.target;
     // Special handling for phone input - only allow numbers
     if (name === "phone") {
-      const numericValue = value.replace(/[^0-9]/g, "");
+      const numericValue = value.replace(/[^0-9]/g, "").slice(0, 10);
       setFormData((prev) => ({ ...prev, [name]: numericValue }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
@@ -1109,7 +1109,7 @@ export function OptInForm() {
                 onChange={handleChange}
                 onKeyPress={(e) => {
                   // Prevent non-numeric input
-                  if (!/[0-9]/.test(e.key)) {
+                  if (!/[0-9]/.test(e.key) || formData.phone.length >= 10) {
                     e.preventDefault();
                   }
                 }}
