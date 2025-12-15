@@ -28,6 +28,13 @@
     ],
     "impactTitle": "Impact on France",
     "impactBody": "The initiative strengthens the national economy by empowering individuals, promoting technological adoption, and reinforcing trust through institutional support."
+  },
+  "thankYou": {
+    "title": "Thank you!",
+    "subtitle": "Your registration has been successfully submitted.",
+    "body": "An official program consultant will contact you shortly to discuss your eligibility and next steps.",
+    "note": "Please check your email for a confirmation message and keep your phone nearby for our call.",
+    "button": "Return to home"
   }
 }
 
