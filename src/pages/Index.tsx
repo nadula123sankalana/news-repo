@@ -13,12 +13,12 @@ const Index = () => {
       <main className="container py-8 max-w-5xl lg:max-w-6xl">
         {/* Headline */}
         <h1 className="news-headline text-3xl md:text-4xl lg:text-[2.5rem] mb-4">
-          Following recent warnings from Elon Musk about the accelerating role of artificial intelligence in global financial systems…
+          Elon Musk's AI Warning Triggers New Bank-Supported Initiative in France Allowing Public Access to Generate Up to €20,000 Per Month
         </h1>
-        
+
         {/* Subheadline */}
         <p className="news-subhead text-lg md:text-xl mb-6 leading-relaxed">
-          A new business initiative supported by leading French financial institutions is gaining significant attention.
+          A bank-backed program opens AI-assisted income opportunities to the public, with the potential to reach €20,000 per month.
         </p>
         
         {/* Article Meta */}

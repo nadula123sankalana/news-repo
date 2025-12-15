@@ -4,21 +4,12 @@ export function ArticleContent() {
   return (
     <article className="news-body space-y-6">
       <p className="text-lg leading-relaxed first-letter:text-5xl first-letter:font-headline first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
-        Following recent warnings from Elon Musk about the accelerating role of artificial intelligence in global financial systems, a new business initiative supported by leading French financial institutions has gained significant attention.
+        Following recent warnings from Elon Musk about the accelerating role of artificial intelligence in global financial systems, a new business initiative supported by leading French financial institutions has gained significant attention. The program is designed to give the public access to AI-assisted income opportunities with earning potential up to €20,000 per month.
       </p>
 
       <p>
-        The initiative aims to provide citizens with access to AI-assisted income-generation opportunities previously reserved for experts.
+        The initiative aims to provide citizens with access to AI-assisted income-generation opportunities previously reserved for experts. It brings structured, bank-supported guidance to everyday participants.
       </p>
-
-      <blockquote className="border-l-4 border-primary pl-6 py-2 my-8 bg-muted/50">
-        <p className="text-lg italic text-news-subhead">
-          "Artificial intelligence is transforming the way we understand financial markets. This initiative represents a major step toward democratizing these technologies."
-        </p>
-        <cite className="text-sm text-muted-foreground mt-2 block not-italic">
-          — Official Source, Bank of France
-        </cite>
-      </blockquote>
 
       <p>
         Recent initiatives by the French government and the Bank of France aim to encourage entrepreneurship and innovation by giving citizens structured access to modern digital systems.
@@ -61,7 +52,7 @@ export function ArticleContent() {
           Project Background
         </h3>
         <p className="text-sm">
-          The program emerged from extensive research into digital transformation and economic resilience. It reflects France's commitment to innovation while maintaining strict regulatory oversight.
+            The program emerged from extensive research into digital transformation and economic resilience. It reflects France's commitment to innovation while maintaining strict regulatory oversight.
         </p>
       </div>
 
