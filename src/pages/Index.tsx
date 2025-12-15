@@ -4,14 +4,13 @@ import { ArticleContent } from "@/components/news/ArticleContent";
 import { VideoPlaceholder } from "@/components/news/VideoPlaceholder";
 import { NewsFooter } from "@/components/news/NewsFooter";
 import { OptInForm } from "@/components/news/OptInForm";
-import newsHeroImage from "@/assets/news-hero.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <NewsHeader />
       
-      <main className="container py-8 max-w-3xl">
+      <main className="container py-8 max-w-5xl lg:max-w-6xl">
         {/* Headline */}
         <h1 className="news-headline text-3xl md:text-4xl lg:text-[2.5rem] mb-4">
           Following recent warnings from Elon Musk about the accelerating role of artificial intelligence in global financial systems…
@@ -33,7 +32,7 @@ const Index = () => {
         
         {/* Featured Image/Video */}
         <VideoPlaceholder 
-          imageUrl={newsHeroImage}
+          imageUrl="/elone.jpg"
           caption="Artificial intelligence and financial systems: a revolution in progress — Credit: INFO Business"
         />
         

@@ -30,7 +30,7 @@ export function ArticleMeta({
       <div className="flex items-center gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-1.5">
           <Clock className="w-4 h-4" />
-          <span>Published {publishDate} at {publishTime}</span>
+          <span>Published today</span>
         </div>
         <div className="flex items-center gap-1.5">
           <MessageCircle className="w-4 h-4" />

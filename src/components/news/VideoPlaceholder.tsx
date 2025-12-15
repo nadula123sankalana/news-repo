@@ -7,7 +7,7 @@ interface VideoPlaceholderProps {
 
 export function VideoPlaceholder({ imageUrl, caption }: VideoPlaceholderProps) {
   return (
-    <figure className="my-6">
+    <figure className="my-6 max-w-4xl mx-auto">
       <div className="relative aspect-video bg-muted rounded-sm overflow-hidden group cursor-pointer">
         {imageUrl ? (
           <img 
