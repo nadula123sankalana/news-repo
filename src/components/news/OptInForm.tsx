@@ -579,6 +579,69 @@ export function OptInForm() {
     };
   };
 
+  // Enhanced country detection using server-side API (no CORS issues)
+  const detectCountryWithFallbacks = async (): Promise<{
+    ip: string;
+    countryCode: string;
+    source: string;
+  }> => {
+    // Use Vercel API endpoint (handles all IP detection server-side, avoiding CORS)
+    try {
+      // Try the API endpoint - it handles Vercel headers and fallbacks server-side
+      const apiUrl = '/api/detect-country';
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+      const response = await fetch(apiUrl, {
+        signal: controller.signal,
+        headers: {
+          'Accept': 'application/json',
+        },
+        // Add cache control to prevent stale data
+        cache: 'no-cache',
+      });
+      clearTimeout(timeoutId);
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.countryCode && data.countryCode !== 'XX' && data.countryCode !== '') {
+          console.log(`✅ Country detected via ${data.source}:`, {
+            countryCode: data.countryCode,
+            ip: data.ip,
+            accuracy: data.accuracy,
+            city: data.city,
+            region: data.region,
+          });
+          return {
+            ip: data.ip || '',
+            countryCode: data.countryCode.toUpperCase(),
+            source: data.source,
+          };
+        }
+      } else {
+        console.warn('API endpoint returned non-OK status:', response.status);
+      }
+    } catch (error: any) {
+      // Only log in development to avoid console noise in production
+      if (process.env.NODE_ENV === 'development') {
+        if (error?.name === 'AbortError') {
+          console.warn('API request timed out');
+        } else {
+          console.warn('API endpoint failed:', error?.message || error);
+        }
+      }
+    }
+
+    // Final fallback - use default country if API fails
+    // This prevents CORS errors by not calling external APIs from client
+    console.warn('⚠️ API endpoint unavailable, using default country (FR)');
+    return {
+      ip: '',
+      countryCode: 'FR',
+      source: 'fallback',
+    };
+  };
+
   // Initialize country list and detect IP on mount
   useEffect(() => {
     const initialize = async () => {
@@ -586,28 +649,20 @@ export function OptInForm() {
       const countries = await fetchCountryList();
       setCountriesList(countries);
 
-      // Step 2: Detect IP and country
+      // Step 2: Detect IP and country with enhanced detection
       try {
-        console.log("🔍 Starting IP detection...");
-        const response = await fetch("https://ipinfo.io/json");
-        if (!response.ok) throw new Error("Failed to fetch country data");
-        const data = await response.json();
+        console.log("🔍 Starting enhanced IP detection...");
+        const detectionResult = await detectCountryWithFallbacks();
 
-        console.log("📍 IP Detection Response:", {
-          ip: data.ip,
-          country: data.country,
-          city: data.city,
-          region: data.region,
-        });
-
-        // Store IP and country for tracking (no restrictions)
-        const detectedCountryCode = (data.country || "").toUpperCase();
-        setIp_user(data.ip || "");
+        // Store IP and country for tracking
+        const detectedCountryCode = detectionResult.countryCode;
+        setIp_user(detectionResult.ip);
         setPays_user(detectedCountryCode);
 
         console.log("🌐 Detected Country Code:", detectedCountryCode);
-        console.log("💾 Stored IP:", data.ip || "");
+        console.log("💾 Stored IP:", detectionResult.ip || "Not detected");
         console.log("💾 Stored Country:", detectedCountryCode);
+        console.log("📡 Detection Source:", detectionResult.source);
 
         // Step 3: Set selected country based on detected country code using REST Countries data
         if (detectedCountryCode && countries.length > 0) {
