@@ -29,11 +29,8 @@ if (!i18n.isInitialized) {
       react: {
         useSuspense: false,
       },
-      // Ensure translations are loaded
-      load: "languageOnly",
-      // Don't return key if translation is missing (for debugging)
-      returnEmptyString: false,
-      returnNull: false,
+      // Debug mode to see what's happening
+      debug: process.env.NODE_ENV === "development",
     });
 }
 

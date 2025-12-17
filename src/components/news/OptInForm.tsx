@@ -270,6 +270,15 @@ const FALLBACK_COUNTRIES: Country[] = [
 export function OptInForm() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  
+  // Debug: Check if translations are loaded
+  if (process.env.NODE_ENV === "development") {
+    useEffect(() => {
+      console.log("Current language:", i18n.language);
+      console.log("Translation test:", t("form.title"));
+      console.log("Has form.title?", i18n.exists("form.title"));
+    }, [i18n.language, t]);
+  }
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
