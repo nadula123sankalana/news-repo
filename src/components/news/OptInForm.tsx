@@ -579,25 +579,23 @@ export function OptInForm() {
     };
   };
 
-  // Enhanced country detection using server-side API (no CORS issues)
+  // Enhanced country detection - uses API on Vercel, client-side methods locally
   const detectCountryWithFallbacks = async (): Promise<{
     ip: string;
     countryCode: string;
     source: string;
   }> => {
-    // Use Vercel API endpoint (handles all IP detection server-side, avoiding CORS)
+    // Method 1: Try Vercel API endpoint first (works on Vercel, fails locally)
     try {
-      // Try the API endpoint - it handles Vercel headers and fallbacks server-side
       const apiUrl = '/api/detect-country';
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
 
       const response = await fetch(apiUrl, {
         signal: controller.signal,
         headers: {
           'Accept': 'application/json',
         },
-        // Add cache control to prevent stale data
         cache: 'no-cache',
       });
       clearTimeout(timeoutId);
@@ -609,8 +607,6 @@ export function OptInForm() {
             countryCode: data.countryCode,
             ip: data.ip,
             accuracy: data.accuracy,
-            city: data.city,
-            region: data.region,
           });
           return {
             ip: data.ip || '',
@@ -618,23 +614,77 @@ export function OptInForm() {
             source: data.source,
           };
         }
-      } else {
-        console.warn('API endpoint returned non-OK status:', response.status);
       }
     } catch (error: any) {
-      // Only log in development to avoid console noise in production
+      // API endpoint not available (local development) - fall through to client-side methods
       if (process.env.NODE_ENV === 'development') {
-        if (error?.name === 'AbortError') {
-          console.warn('API request timed out');
-        } else {
-          console.warn('API endpoint failed:', error?.message || error);
-        }
+        console.log('🔧 Local development: API endpoint unavailable, using client-side detection...');
       }
     }
 
-    // Final fallback - use default country if API fails
-    // This prevents CORS errors by not calling external APIs from client
-    console.warn('⚠️ API endpoint unavailable, using default country (FR)');
+    // Method 2: Client-side detection for local development
+    // Try ipapi.co (works better with CORS in some cases)
+    try {
+      const ipapiResult = await tryIpapiCo();
+      if (ipapiResult) {
+        console.log('✅ Country detected via ipapi.co (client-side):', ipapiResult.countryCode);
+        return {
+          ip: ipapiResult.ip,
+          countryCode: ipapiResult.countryCode,
+          source: 'ipapi.co-client',
+        };
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('ipapi.co failed:', error);
+      }
+    }
+
+    // Method 3: Try ipinfo.io (may have CORS issues, but worth trying)
+    try {
+      const ipinfoResult = await tryIpinfoIo();
+      if (ipinfoResult) {
+        console.log('✅ Country detected via ipinfo.io (client-side):', ipinfoResult.countryCode);
+        return {
+          ip: ipinfoResult.ip,
+          countryCode: ipinfoResult.countryCode,
+          source: 'ipinfo.io-client',
+        };
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('ipinfo.io failed (CORS may be blocking):', error);
+      }
+    }
+
+    // Method 4: Try ip-api.com (HTTP, no CORS issues)
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
+      const response = await fetch('http://ip-api.com/json/?fields=status,countryCode,query', {
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.status === 'success' && data.countryCode) {
+          console.log('✅ Country detected via ip-api.com (client-side):', data.countryCode);
+          return {
+            ip: data.query || '',
+            countryCode: data.countryCode.toUpperCase(),
+            source: 'ip-api.com-client',
+          };
+        }
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('ip-api.com failed:', error);
+      }
+    }
+
+    // Final fallback - use default country
+    console.warn('⚠️ All detection methods failed, using default country (FR)');
     return {
       ip: '',
       countryCode: 'FR',
