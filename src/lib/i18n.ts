@@ -26,6 +26,14 @@ if (!i18n.isInitialized) {
         caches: ["localStorage"],
       },
       returnObjects: true,
+      react: {
+        useSuspense: false,
+      },
+      // Ensure translations are loaded
+      load: "languageOnly",
+      // Don't return key if translation is missing (for debugging)
+      returnEmptyString: false,
+      returnNull: false,
     });
 }
 

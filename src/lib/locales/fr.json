@@ -52,7 +52,32 @@
       "Commencez à observer l’activité assistée par le système en quelques jours"
     ],
     "impactTitle": "Impact sur la France",
-    "impactBody": "L’initiative renforce l’économie nationale en autonomisant les individus, en favorisant l’adoption technologique et en renforçant la confiance grâce au soutien institutionnel."
+    "impactBody": "L'initiative renforce l'économie nationale en autonomisant les individus, en favorisant l'adoption technologique et en renforçant la confiance grâce au soutien institutionnel."
+  },
+  "form": {
+    "title": "Vérifiez votre éligibilité pour rejoindre le programme",
+    "subtitle": "Inscrivez-vous ci-dessous pour être contacté par un consultant officiel du programme.",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "lastNamePlaceholder": "Entrez votre nom",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "phonePlaceholder": "Entrez votre numéro de téléphone (9-10 chiffres)",
+    "submitButton": "Commencer",
+    "submitting": "Envoi en cours...",
+    "errors": {
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom est requis",
+      "emailRequired": "L'adresse e-mail est requise",
+      "emailInvalid": "Adresse e-mail invalide",
+      "phoneRequired": "Le numéro de téléphone est requis",
+      "phoneInvalid": "Numéro de téléphone invalide",
+      "phoneLength": "Le numéro de téléphone doit contenir 9 à 10 chiffres",
+      "countryRequired": "Le pays est requis",
+      "submitError": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer plus tard."
+    }
   }
 }
 

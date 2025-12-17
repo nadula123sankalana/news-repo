@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -268,6 +269,7 @@ const FALLBACK_COUNTRIES: Country[] = [
 
 export function OptInForm() {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -914,37 +916,37 @@ export function OptInForm() {
 
     // Validate firstName
     if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
+      newErrors.firstName = t("form.errors.firstNameRequired");
       isValid = false;
     }
 
     // Validate lastName
     if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
+      newErrors.lastName = t("form.errors.lastNameRequired");
       isValid = false;
     }
 
     // Validate email
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = t("form.errors.emailRequired");
       isValid = false;
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = "Invalid email address";
+      newErrors.email = t("form.errors.emailInvalid");
       isValid = false;
     }
 
     // Validate phone
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = t("form.errors.phoneRequired");
       isValid = false;
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Invalid phone number";
+      newErrors.phone = t("form.errors.phoneInvalid");
       isValid = false;
     }
 
     // Validate country
     if (!selectedCountry) {
-      newErrors.country = "Country is required";
+      newErrors.country = t("form.errors.countryRequired");
       isValid = false;
     }
 
@@ -962,7 +964,7 @@ export function OptInForm() {
     // Step 1: Validate phone length (9-10 digits)
     const phoneDigits = formData.phone.replace(/\D/g, "");
     if (!/^\d{9,10}$/.test(phoneDigits)) {
-      setPhoneError("Phone number must be 9-10 digits");
+      setPhoneError(t("form.errors.phoneLength"));
       setIsSubmitting(false);
       return;
     }
@@ -970,13 +972,13 @@ export function OptInForm() {
     // Step 2: Validate all form fields
     if (!validateForm()) {
       if (!formData.firstName.trim()) {
-        setSubmitError("First name is required");
+        setSubmitError(t("form.errors.firstNameRequired"));
       } else if (!formData.lastName.trim()) {
-        setSubmitError("Last name is required");
+        setSubmitError(t("form.errors.lastNameRequired"));
       } else if (!formData.email.trim() || !validateEmail(formData.email)) {
-        setSubmitError("Invalid email address");
+        setSubmitError(t("form.errors.emailInvalid"));
       } else if (!selectedCountry) {
-        setPhoneError("Country is required");
+        setPhoneError(t("form.errors.countryRequired"));
       }
       setIsSubmitting(false);
       return;
@@ -1061,9 +1063,7 @@ export function OptInForm() {
       navigate("/thank-you");
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitError(
-        "There was an error submitting the form. Please try again later."
-      );
+      setSubmitError(t("form.errors.submitError"));
       setIsSubmitting(false);
     }
   };
@@ -1072,22 +1072,22 @@ export function OptInForm() {
     <section className="mt-12 border-t-4 border-primary bg-background p-6 md:p-10 rounded-sm shadow-sm">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground mb-3">
-          Check Your Eligibility to Join the Program
+          {t("form.title")}
         </h2>
         <p className="text-muted-foreground mb-8">
-          Register below to be contacted by an official program consultant.
+          {t("form.subtitle")}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5 text-left">
           <div className="space-y-2">
             <Label htmlFor="firstName" className="text-foreground font-medium">
-              First Name
+              {t("form.firstName")}
             </Label>
             <Input
               id="firstName"
               name="firstName"
               type="text"
-              placeholder="Enter your first name"
+              placeholder={t("form.firstNamePlaceholder")}
               value={formData.firstName}
               onChange={handleChange}
               required
@@ -1100,13 +1100,13 @@ export function OptInForm() {
 
           <div className="space-y-2">
             <Label htmlFor="lastName" className="text-foreground font-medium">
-              Last Name
+              {t("form.lastName")}
             </Label>
             <Input
               id="lastName"
               name="lastName"
               type="text"
-              placeholder="Enter your last name"
+              placeholder={t("form.lastNamePlaceholder")}
               value={formData.lastName}
               onChange={handleChange}
               required
@@ -1119,13 +1119,13 @@ export function OptInForm() {
 
           <div className="space-y-2">
             <Label htmlFor="email" className="text-foreground font-medium">
-              Email Address
+              {t("form.email")}
             </Label>
             <Input
               id="email"
               name="email"
               type="email"
-              placeholder="Enter your email address"
+              placeholder={t("form.emailPlaceholder")}
               value={formData.email}
               onChange={handleChange}
               required
@@ -1138,7 +1138,7 @@ export function OptInForm() {
 
           <div className="space-y-2">
             <Label htmlFor="phone" className="text-foreground font-medium">
-              Phone Number
+              {t("form.phone")}
             </Label>
             <div className="flex gap-2">
               <Select
@@ -1175,7 +1175,7 @@ export function OptInForm() {
                 }}
               >
                 <SelectTrigger className="w-32 h-12">
-                  <SelectValue placeholder="Select country" />
+                  <SelectValue placeholder={t("form.phone")} />
                 </SelectTrigger>
                 <SelectContent className="max-h-[400px]">
                   {countriesList
@@ -1218,7 +1218,7 @@ export function OptInForm() {
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="Enter your phone number (9-10 digits)"
+                placeholder={t("form.phonePlaceholder")}
                 value={formData.phone}
                 onChange={handleChange}
                 onKeyPress={(e) => {
@@ -1253,7 +1253,7 @@ export function OptInForm() {
             className="w-full h-14 text-lg font-semibold mt-4"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Get Started"}
+            {isSubmitting ? t("form.submitting") : t("form.submitButton")}
           </Button>
         </form>
       </div>

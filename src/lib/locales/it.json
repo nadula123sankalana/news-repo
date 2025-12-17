@@ -52,7 +52,32 @@
       "Inizia a osservare l’attività supportata dal sistema entro pochi giorni"
     ],
     "impactTitle": "Impatto sulla Francia",
-    "impactBody": "L’iniziativa rafforza l’economia nazionale, responsabilizzando gli individui, promuovendo l’adozione tecnologica e rafforzando la fiducia attraverso il supporto istituzionale."
+    "impactBody": "L'iniziativa rafforza l'economia nazionale, responsabilizzando gli individui, promuovendo l'adozione tecnologica e rafforzando la fiducia attraverso il supporto istituzionale."
+  },
+  "form": {
+    "title": "Verifica la tua idoneità per partecipare al programma",
+    "subtitle": "Registrati qui sotto per essere contattato da un consulente ufficiale del programma.",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Indirizzo e-mail",
+    "phone": "Numero di telefono",
+    "firstNamePlaceholder": "Inserisci il tuo nome",
+    "lastNamePlaceholder": "Inserisci il tuo cognome",
+    "emailPlaceholder": "Inserisci il tuo indirizzo e-mail",
+    "phonePlaceholder": "Inserisci il tuo numero di telefono (9-10 cifre)",
+    "submitButton": "Inizia",
+    "submitting": "Invio in corso...",
+    "errors": {
+      "firstNameRequired": "Il nome è obbligatorio",
+      "lastNameRequired": "Il cognome è obbligatorio",
+      "emailRequired": "L'indirizzo e-mail è obbligatorio",
+      "emailInvalid": "Indirizzo e-mail non valido",
+      "phoneRequired": "Il numero di telefono è obbligatorio",
+      "phoneInvalid": "Numero di telefono non valido",
+      "phoneLength": "Il numero di telefono deve contenere 9-10 cifre",
+      "countryRequired": "Il paese è obbligatorio",
+      "submitError": "Si è verificato un errore durante l'invio del modulo. Riprova più tardi."
+    }
   }
 }
 

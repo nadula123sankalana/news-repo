@@ -53,5 +53,30 @@
     ],
     "impactTitle": "Impact on France",
     "impactBody": "The initiative strengthens the national economy by empowering individuals, promoting technological adoption, and reinforcing trust through institutional support."
+  },
+  "form": {
+    "title": "Check Your Eligibility to Join the Program",
+    "subtitle": "Register below to be contacted by an official program consultant.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNamePlaceholder": "Enter your last name",
+    "emailPlaceholder": "Enter your email address",
+    "phonePlaceholder": "Enter your phone number (9-10 digits)",
+    "submitButton": "Get Started",
+    "submitting": "Submitting...",
+    "errors": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Invalid phone number",
+      "phoneLength": "Phone number must be 9-10 digits",
+      "countryRequired": "Country is required",
+      "submitError": "There was an error submitting the form. Please try again later."
+    }
   }
 }
