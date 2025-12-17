@@ -12,6 +12,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+// Extend Window interface for Taboola
+declare global {
+  interface Window {
+    _tfa?: Array<any>;
+  }
+}
+
 // API Configuration
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyM84s46deLIiHsHwCj9Ernaw3l5bSgCyk6F8LY_HzJ9ghhtHitYerahFEwIg40V_iQ/exec";
@@ -1059,7 +1066,25 @@ export function OptInForm() {
         }).catch((err) => console.error("Google Sheets Duplicate error:", err)),
       ]);
 
-      // Step 6: Handle success immediately (don't wait for API responses)
+      // Step 6: Fire Taboola conversion event before navigation
+      // Initialize Taboola array if it doesn't exist
+      if (typeof window !== 'undefined') {
+        window._tfa = window._tfa || [];
+        
+        // Fire the conversion event
+        try {
+          window._tfa.push({
+            notify: 'event',
+            name: 'Submit_Application-A_(Codeless)',
+            id: 1963480
+          });
+          console.log('✅ Taboola conversion event fired: Submit_Application-A_(Codeless)');
+        } catch (error) {
+          console.warn('Taboola event error:', error);
+        }
+      }
+
+      // Step 7: Handle success immediately (don't wait for API responses)
       setFormData({
         firstName: "",
         lastName: "",
