@@ -36,7 +36,7 @@ const Index = () => {
         {/* Featured Image/Video */}
         <VideoPlaceholder 
           imageUrl="/mask.png"
-          caption="Artificial intelligence and financial systems: a revolution in progress — Credit: INFO Business"
+          caption={t("hero.imageCaption")}
         />
         
         {/* Article Body */}
