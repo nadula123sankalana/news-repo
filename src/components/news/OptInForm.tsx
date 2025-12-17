@@ -623,41 +623,7 @@ export function OptInForm() {
     }
 
     // Method 2: Client-side detection for local development
-    // Try ipapi.co (works better with CORS in some cases)
-    try {
-      const ipapiResult = await tryIpapiCo();
-      if (ipapiResult) {
-        console.log('✅ Country detected via ipapi.co (client-side):', ipapiResult.countryCode);
-        return {
-          ip: ipapiResult.ip,
-          countryCode: ipapiResult.countryCode,
-          source: 'ipapi.co-client',
-        };
-      }
-    } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('ipapi.co failed:', error);
-      }
-    }
-
-    // Method 3: Try ipinfo.io (may have CORS issues, but worth trying)
-    try {
-      const ipinfoResult = await tryIpinfoIo();
-      if (ipinfoResult) {
-        console.log('✅ Country detected via ipinfo.io (client-side):', ipinfoResult.countryCode);
-        return {
-          ip: ipinfoResult.ip,
-          countryCode: ipinfoResult.countryCode,
-          source: 'ipinfo.io-client',
-        };
-      }
-    } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('ipinfo.io failed (CORS may be blocking):', error);
-      }
-    }
-
-    // Method 4: Try ip-api.com (HTTP, no CORS issues)
+    // Try ip-api.com first (HTTP, typically no CORS issues)
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 3000);
@@ -683,6 +649,40 @@ export function OptInForm() {
       }
     }
 
+    // Method 3: Try ipapi.co (works better with CORS in some cases)
+    try {
+      const ipapiResult = await tryIpapiCo();
+      if (ipapiResult) {
+        console.log('✅ Country detected via ipapi.co (client-side):', ipapiResult.countryCode);
+        return {
+          ip: ipapiResult.ip,
+          countryCode: ipapiResult.countryCode,
+          source: 'ipapi.co-client',
+        };
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('ipapi.co failed:', error);
+      }
+    }
+
+    // Method 4: Try ipinfo.io (may have CORS issues, but worth trying as last resort)
+    try {
+      const ipinfoResult = await tryIpinfoIo();
+      if (ipinfoResult) {
+        console.log('✅ Country detected via ipinfo.io (client-side):', ipinfoResult.countryCode);
+        return {
+          ip: ipinfoResult.ip,
+          countryCode: ipinfoResult.countryCode,
+          source: 'ipinfo.io-client',
+        };
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('ipinfo.io failed (CORS may be blocking):', error);
+      }
+    }
+
     // Final fallback - use default country
     console.warn('⚠️ All detection methods failed, using default country (FR)');
     return {
@@ -701,7 +701,16 @@ export function OptInForm() {
 
       // Step 2: Detect IP and country with enhanced detection
       try {
-        console.log("🔍 Starting enhanced IP detection...");
+        const isLocalhost = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1' ||
+                           window.location.hostname.includes('localhost');
+        
+        if (isLocalhost) {
+          console.log("🔍 Local development detected - using client-side IP detection...");
+        } else {
+          console.log("🔍 Production environment - trying API endpoint first...");
+        }
+        
         const detectionResult = await detectCountryWithFallbacks();
 
         // Store IP and country for tracking
