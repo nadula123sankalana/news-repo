@@ -35,7 +35,7 @@ const Index = () => {
         
         {/* Featured Image/Video */}
         <VideoPlaceholder 
-          imageUrl="/mask.png"
+          imageUrl="/5.png"
           caption={t("hero.imageCaption")}
         />
         
