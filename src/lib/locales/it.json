@@ -1,4 +1,23 @@
 {
+  "landing": {
+    "title": "IA in Francia: come l'intelligenza artificiale viene adottata in diversi settori",
+    "content": {
+      "p1": "L'intelligenza artificiale viene sempre più utilizzata in tutto il mondo in aree come la sanità, la logistica, l'istruzione e i servizi digitali. Piuttosto che concentrarsi solo sull'automazione, molti sistemi più recenti sono progettati per aiutare a organizzare e presentare informazioni complesse in modo più chiaro.",
+      "p2": "In tutta Europa, inclusa la Francia, c'è stato un crescente interesse per come le piattaforme assistite dall'IA stanno iniziando a influenzare il modo in cui le persone esplorano e comprendono i sistemi, specialmente per coloro che non sono tecnicamente esperti e preferiscono spiegazioni più semplici."
+    },
+    "features": {
+      "healthcare": "Sanità",
+      "logistics": "Logistica",
+      "education": "Istruzione",
+      "digital": "Servizi digitali"
+    },
+    "readMore": "Leggi di più",
+    "scrollHint": "Scorri per esplorare",
+    "info": {
+      "title": "Esplorare l'adozione dell'IA",
+      "description": "Scopri come l'intelligenza artificiale sta trasformando le industrie e creando nuove opportunità per l'innovazione e la crescita in tutta la Francia e l'Europa."
+    }
+  },
   "hero": {
     "headline": "Gli avvertimenti sull'IA discussi in un Forum per gli investimenti USA–Arabia Saudita a Washington stanno ora influenzando una nuova iniziativa sostenuta dalle banche in Francia",
     "subheadline": "Ci era stato detto che l'intelligenza artificiale avrebbe potuto sconvolgere interi settori. Oggi, quell'avvertimento sta diventando realtà nel mondo degli investimenti. La domanda non è più se l'IA cambierà i mercati finanziari, ma se il processo decisionale umano può sopravvivere a questo cambiamento.",
@@ -78,6 +97,107 @@
       "countryRequired": "Il paese è obbligatorio",
       "submitError": "Si è verificato un errore durante l'invio del modulo. Riprova più tardi."
     }
+  },
+  "privacyPolicy": {
+    "title": "Informativa sulla privacy",
+    "general": {
+      "title": "Generale",
+      "p1": "Riceviamo i tuoi dati personali per utilizzare il Sito Web e/o il Servizio. Informazioni dettagliate sul trattamento dei tuoi dati personali sono fornite in questa Informativa sulla privacy.",
+      "p2": "Questa pagina ti informa sulle nostre politiche riguardo la raccolta, l'uso e la divulgazione dei dati personali quando tu, come Utente di questo Sito Web (di seguito «Tu» o «Utente»), utilizzi questo Sito Web.",
+      "p3": "Utilizzando il Sito Web, accetti la raccolta e l'uso delle informazioni in conformità con questa politica. Salvo diversamente definito in questa Informativa sulla privacy, i termini utilizzati in questa Informativa sulla privacy hanno gli stessi significati dei nostri termini di utilizzo del Sito Web."
+    },
+    "methods": {
+      "title": "Metodi e principi del trattamento dei dati personali",
+      "p1": "Rispettiamo la tua sicurezza e trattiamo le tue informazioni con dignità, legalmente e in conformità con questa Informativa sulla privacy e la legge pertinente. Nel caso tu sia nell'Unione Europea, trattiamo i tuoi dati personali secondo il Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio del 27 aprile 2016 sulla protezione delle persone fisiche riguardo al trattamento dei dati personali e sulla libera circolazione di tali dati, e che abroga la direttiva 95/46/CE (Regolamento generale sulla protezione dei dati; \"GDPR\").",
+      "p2": "Al fine di evitare la divulgazione e l'uso non autorizzati di dati personali che non hanno l'autorità di divulgare tali dati, nonché per prevenire altri tipi di violazioni della sicurezza dei dati personali in corso di trattamento, abbiamo sviluppato misure tecniche e organizzative appropriate.",
+      "p3": "In caso di violazione della sicurezza dei dati personali trattati, che comporta un rischio elevato per i tuoi diritti e libertà, ti informeremo immediatamente del nostro indirizzo e-mail.",
+      "p4": "Se non hai dato il tuo consenso preventivo, non tratteremo i tuoi dati personali."
+    },
+    "processed": {
+      "title": "Dati personali trattati",
+      "p1": "Il trattamento dei dati personali avviene dopo che sono stati inseriti nel modulo di registrazione sul Sito Web. Quando invii il modulo di registrazione, accetti di concludere un accordo con noi ai termini del quale facilitiamo la comunicazione tra il fornitore di Prodotti e/o Servizi (Inserzionista) e te, al fine di elaborare la tua domanda per concludere un accordo con l'Inserzionista per l'acquisto di Servizi o Prodotti pubblicizzati sul Sito Web.",
+      "p2": "Gli indirizzi IP e i cookie degli utenti del nostro sito Web sono raccolti e trattati da noi. I cookie sono piccoli pezzi di dati inviati da un server Web e memorizzati sul tuo computer, questi dati ci aiutano a migliorare l'esperienza del nostro sito Web. Puoi rifiutare i cookie disabilitandoli nelle impostazioni del tuo browser Web, tuttavia, limitare l'uso dei cookie può influire sul funzionamento del nostro sito Web.",
+      "p3": "Confermi che tutti i dati personali che fornisci sono aggiornati, veritieri e corretti. Sei responsabile di eventuali danni causati dalla fornitura di informazioni personali errate."
+    },
+    "processingMethods": {
+      "title": "Metodi di trattamento dei dati personali",
+      "p1": "Il trattamento dei dati personali viene effettuato automaticamente. Il trattamento dei dati personali è automatico, questo processo non può portare a conseguenze legali, né influenzarti in altro modo.",
+      "p2": "Il trattamento dei dati personali può essere delegato ad altri fornitori di servizi di mailing di massa, processori e fornitori di servizi IT e cloud. Inoltre, possiamo delegare parte o tutto il trattamento al processore, al fornitore di servizi di mailing di massa, al fornitore di servizi IT e al fornitore di servizi cloud. La selezione dei processori viene effettuata nel modo più attento possibile in modo che i tuoi dati personali siano protetti in qualsiasi momento durante il loro trattamento.",
+      "p3": "Per utilizzare il Servizio, è necessario fornire i tuoi dati personali agli Inserzionisti.",
+      "p4": "I dati possono essere trasferiti in qualsiasi stato del mondo. Gli inserzionisti e i processori sono i destinatari dei tuoi dati personali. Per completare il contratto tra noi, il trasferimento dei tuoi dati personali agli Inserzionisti è richiesto, come specificato nei Termini. Il trasferimento dei dati personali avviene utilizzando precauzioni sufficienti per garantire che i tuoi dati personali siano adeguatamente protetti."
+    },
+    "legalBasis": {
+      "title": "Base giuridica e periodi del trattamento dei dati personali",
+      "p1": "Al fine di fornirti Servizi di qualità, dobbiamo trattare i dati personali che ci hai fornito nel modulo di registrazione o dare questi dati in qualsiasi altro modo. Il trattamento dei dati viene eseguito durante il periodo in cui ti forniamo servizi in conformità con i Termini.",
+      "p2": "L'indirizzo IP, l'indirizzo e-mail e le informazioni derivate dai cookie sono trattati per inviarti notifiche di servizi e prodotti relativi al Sito Web, nonché informazioni su opportunità commerciali che potrebbero interessarti. Tra le offerte commerciali, puoi trovare inserzionisti o altri nostri partner commerciali. Il trattamento dei dati personali viene effettuato secondo il tuo consenso (segno nel modulo di registrazione). Hai il diritto di ritirare il tuo consenso alla raccolta di dati personali senza influire sulla legalità del trattamento basato su tale consenso prima della sua revoca, nonché sul trattamento eseguito su altre basi giuridiche oltre al tuo consenso. Il trattamento del tuo indirizzo e-mail a questo scopo sarà elaborato fino a quando non ritirerai il tuo consenso."
+    },
+    "rights": {
+      "title": "Diritti dell'interessato",
+      "intro": "Nel caso in cui il GDPR sia applicabile, hai i seguenti diritti dell'interessato, ma non limitati a:",
+      "rightsList": [
+        "Diritto di accesso ai dati personali (Articolo 15 del GDPR);",
+        "Diritto di rettifica (Articolo 16 del GDPR);",
+        "Diritto alla cancellazione (Articolo 17 del GDPR);",
+        "Diritto alla limitazione del trattamento (Articolo 18 del GDPR);",
+        "Diritto alla portabilità dei dati (Articolo 20 del GDPR);",
+        "Diritto di opposizione (Articolo 21 del GDPR);",
+        "Diritto di non essere soggetto a una decisione basata esclusivamente su un trattamento automatizzato, compresa la profilazione, che produce effetti giuridici riguardanti l'interessato o lo colpisce in modo simile (Articolo 22 del GDPR);",
+        "Diritto di presentare un reclamo a un'autorità di controllo (Articolo 77 del GDPR)."
+      ],
+      "p1": "Dichiariamo che non siamo responsabili nel significato del regolamento GDPR, nella misura in cui non determiniamo le finalità e i mezzi del trattamento dei dati personali, che ricade sotto la responsabilità dell'Inserzionista.",
+      "p2": "Va notato che nei casi in cui non siamo tenuti a essere soggetti al GDPR, non siamo tenuti a rispettare questi diritti. Tuttavia, anche in questo caso, faremo del nostro meglio per soddisfare la tua denuncia o richiesta. Prima di agire sulla tua richiesta, potrebbe essere necessario verificare la tua identità, questa misura è necessaria per proteggere i tuoi dati personali, quindi non condividiamo i tuoi dati personali con terze parti. Se rifiuti di fornirci informazioni che ci consentono di identificarti, non saremo in grado di elaborare la tua richiesta.",
+      "p3": "Questa Informativa sulla privacy può essere modificata o integrata di volta in volta da noi unilateralmente. La nuova edizione dell'Informativa sulla privacy entra in vigore dal momento in cui viene pubblicata sul Sito Web.",
+      "p4": "Si prega di notare che se continui a utilizzare il Sito Web e il Servizio dopo qualsiasi modifica dell'Informativa sulla privacy, significa che accetti e acconsenti a essere vincolato dalla nuova Informativa sulla privacy. Se non sei d'accordo con eventuali modifiche a questa Informativa sulla privacy e non desideri che le tue informazioni vi siano soggette, dovrai smettere di utilizzare il Sito Web e il Servizio.",
+      "p5": "Una risposta alla tua richiesta può essere ricevuta entro 40 (quaranta) giorni lavorativi dal momento in cui la riceviamo. In una situazione in cui è impossibile elaborare la tua richiesta, ti informeremo sicuramente al riguardo. Per la comunicazione utilizziamo mezzi di comunicazione elettronica, ad esempio e-mail o messenger, se preferisci un metodo di comunicazione diverso, ti preghiamo di informarci.",
+      "p6": "Forniremo qualsiasi comunicazione e qualsiasi azione gratuitamente, tuttavia, quando richiesto, possiamo addebitarti una tariffa ragionevole, tenendo conto dei costi amministrativi e di altre caratteristiche associate alla fornitura di informazioni o rifiutare di agire su richiesta.",
+      "p7": "Puoi presentare un reclamo relativo alla protezione dei dati personali all'organismo statale appropriato, richiedere protezione giudiziaria se ritieni che i tuoi diritti siano stati violati. Puoi anche presentare qualsiasi reclamo o richiesta contattandoci.",
+      "p8": "Se hai bisogno di maggiori informazioni sulle autorità competenti nel tuo paese o qualsiasi informazione del genere, non esitare a contattarci."
+    }
+  },
+  "termsOfUse": {
+    "title": "Termini di utilizzo del sito Web",
+    "general": {
+      "title": "Disposizioni generali",
+      "p1": "Utilizzando wtradvision.app (di seguito «Sito Web»), accetti di rispettare questi termini di utilizzo del Sito Web, che disciplinano i diritti e gli obblighi tra il proprietario del dominio su cui si trova questo Sito Web (di seguito «Operatore»), e tu come Utente di questo Sito Web (di seguito «Tu» o «Utente»).",
+      "p2": "Questo dominio appartiene all'Operatore sulla base della proprietà, la gestione operativa di questo Sito Web pubblicitario è eseguita esclusivamente dall'Operatore. Il Sito Web ti fornisce informazioni sui servizi e prodotti del nostro/i partner/i (di seguito denominato/i «Inserzionista/i»). Il Sito Web ti consente, come Utente di questo Sito Web, di richiedere i prodotti o servizi dell'Inserzionista utilizzando i suoi siti Web (di seguito denominato il «Servizio»). I termini di utilizzo del Sito Web sono disciplinati dai termini di utilizzo del Sito Web, che sono pubblicati sul Sito Web (di seguito denominati i \"Termini\").",
+      "p3": "Il Sito Web funge da piattaforma di informazioni online e include un servizio che consente all'Utente di inviare domande per Prodotti e/o Servizi dell'Inserzionista che sono pubblicizzati sul Sito Web o utilizzando i siti Web dell'Inserzionista (di seguito denominato «Servizio») tramite la sua piattaforma di tracciamento (di seguito denominata «Software»).",
+      "p4": "L'Operatore facilita solo la comunicazione tra il fornitore di prodotti e/o servizi e l'Utente. L'Operatore non è un fornitore di servizi e/o prodotti.",
+      "p5": "Quando invii qualsiasi informazione, accetti i termini di utilizzo del Sito Web, in base ai quali forniamo informazioni a te, al fine di elaborare la tua domanda per concludere un accordo tra te e l'Inserzionista per l'acquisto di servizi o beni pubblicizzati sul Sito Web o utilizzando i siti Web dell'Inserzionista."
+    },
+    "content": {
+      "title": "Contenuto del sito Web",
+      "p1": "Tutti i materiali inclusi banner, materiali video e altro contenuto visualizzato sul Sito Web (di seguito denominato il «Contenuto») sono forniti esclusivamente a scopo pubblicitario e informativo e non devono essere utilizzati per altri scopi, tutti i materiali sono destinati solo all'imitazione o alla modellazione. Il Contenuto potrebbe non essere accurato e non basato su eventi o fatti reali accurati, tuttavia, tutte le informazioni percepite dal Contenuto in forma visiva, orale o scritta non sono consigli finanziari, legali, fiscali o altri consigli professionali e non sono intesi come sostituto della consultazione con un professionista qualificato.",
+      "p2": "Tutti i risultati presentati nella metodologia e/o nel sistema che è disponibile nel Contenuto non indicano necessariamente risultati futuri. Non vengono date garanzie, non vengono fatte dichiarazioni che qualsiasi Utente riceverà o potrà ricevere profitti o perdite simili a quelli indicati nel Contenuto.",
+      "p3": "L'Utente è debitamente informato, comprende e riconosce che l'Operatore non è autorizzato a offrire raccomandazioni legali, contabili, di investimento o fiscali, o raccomandazioni riguardanti la strategia di investimento, l'adeguatezza, la redditività o altre questioni."
+    },
+    "service": {
+      "title": "Utilizzo del servizio",
+      "p1": "Per registrarti sul Sito Web, potresti aver bisogno di un nome, cognome, indirizzo e-mail, numero di telefono e password. Solo un utente autorizzato può avere un account, la registrazione di diversi account registrati dalla stessa persona fisica o giuridica non è consentita e può portare alla chiusura da parte dell'Operatore di tutti gli account che l'Operatore ritiene necessari. L'uso del Servizio è volontario e gratuito.",
+      "p2": "Utilizzando il Sito Web, acconsenti che la tua identificazione e password siano mantenute riservate e accetti di non utilizzare l'account di un altro utente autorizzato.",
+      "p3": "L'Operatore non è responsabile di eventuali perdite o danni derivanti dal mancato rispetto di questi obblighi, non è responsabile di eventuali danni causati da furto, hacking o qualsiasi altro uso non autorizzato della tua password, dati di identificazione o altri mezzi di identificazione.",
+      "p4": "Durante la registrazione, l'Utente è obbligato a fornire all'Operatore informazioni vere, accurate e complete durante la registrazione compilandole nel modulo di registrazione del Sito Web."
+    },
+    "ipRights": {
+      "title": "Diritti di proprietà intellettuale",
+      "p1": "Il copyright sul Contenuto appartiene sia all'Operatore che ai suoi partner, e non possono essere memorizzati, copiati o modificati in alcun formato, venduti o utilizzati in alcun modo in qualsiasi circostanza, distribuiti o trasferiti in alcun modo senza il permesso speciale dell'Operatore.",
+      "p2": "L'Operatore fornisce all'Utente una licenza personale, revocabile, limitata, non esclusiva, gratuita e non trasferibile per utilizzare il Sito Web, il Software e il Contenuto solo per uso personale."
+    },
+    "liability": {
+      "title": "Limitazione di responsabilità",
+      "p1": "L'Utente assume la piena responsabilità e il rischio per l'uso del Sito Web, del Contenuto e del Software. L'Operatore fornisce il Sito Web, il Contenuto e il Software e le informazioni correlate nella forma in cui sono e non fornisce garanzie, rappresentazioni o approvazioni espresse o implicite.",
+      "p2": "L'Operatore non sarà in alcun caso responsabile nei confronti di qualsiasi parte per eventuali perdite dirette, indirette, implicite, punitive, speciali, accessorie o altre perdite indirette derivanti direttamente o indirettamente da qualsiasi uso del Sito Web, del Contenuto e del Software che è fornito così com'è, e senza alcuna garanzia."
+    },
+    "other": {
+      "title": "Altro",
+      "p1": "Se l'Operatore non è in grado di insistere o garantire l'implementazione rigorosa di qualsiasi disposizione di questi Termini, ciò dovrebbe essere interpretato come una rinuncia a qualsiasi disposizione o diritto in conformità con questi Termini o la legislazione.",
+      "p2": "Le relazioni legali stabilite in conformità con questi Termini saranno governate e interpretate in conformità con le leggi di Hong Kong.",
+      "p3": "Questi Termini possono essere modificati o integrati di volta in volta dall'Operatore unilateralmente. La nuova edizione dei Termini entra in vigore dal momento in cui sono pubblicati sul Sito Web. Se l'Utente non è d'accordo con i nuovi Termini, smette di utilizzare il Sito Web e il Servizio."
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Informativa sulla privacy",
+    "termsOfUse": "Termini di utilizzo",
+    "copyright": "© 2024 INFO Business — Tutti i diritti riservati. Questo è un articolo informativo."
   }
 }
 

@@ -104,11 +104,11 @@ const ThankYou = () => {
             {/* Action Button */}
             <div className="mt-8">
               <Button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/article")}
                 size="lg"
                 className="h-14 text-lg font-semibold px-8"
               >
-                Return to Home
+                Return to Article
               </Button>
             </div>
           </div>

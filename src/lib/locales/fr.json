@@ -1,4 +1,23 @@
 {
+  "landing": {
+    "title": "L'IA en France : comment l'intelligence artificielle est adoptée dans différents secteurs",
+    "content": {
+      "p1": "L'intelligence artificielle est de plus en plus utilisée dans le monde entier dans des domaines tels que la santé, la logistique, l'éducation et les services numériques. Plutôt que de se concentrer uniquement sur l'automatisation, de nombreux systèmes plus récents sont conçus pour aider à organiser et présenter des informations complexes de manière plus claire.",
+      "p2": "À travers l'Europe, y compris la France, il y a eu un intérêt croissant pour la façon dont les plateformes assistées par l'IA commencent à influencer la façon dont les gens explorent et comprennent les systèmes, en particulier pour ceux qui ne sont pas techniquement expérimentés et préfèrent des explications plus simples."
+    },
+    "features": {
+      "healthcare": "Santé",
+      "logistics": "Logistique",
+      "education": "Éducation",
+      "digital": "Services numériques"
+    },
+    "readMore": "Lire la suite",
+    "scrollHint": "Faites défiler pour explorer",
+    "info": {
+      "title": "Explorer l'adoption de l'IA",
+      "description": "Découvrez comment l'intelligence artificielle transforme les industries et crée de nouvelles opportunités d'innovation et de croissance à travers la France et l'Europe."
+    }
+  },
   "hero": {
     "headline": "Les avertissements sur l'IA discutés lors d'un Forum d'investissement États-Unis–Arabie saoudite à Washington influencent désormais une nouvelle initiative soutenue par les banques en France",
     "subheadline": "On nous avait prévenus que l'intelligence artificielle pourrait bouleverser des industries entières. Aujourd'hui, cet avertissement devient réalité dans le monde de l'investissement. La question n'est plus de savoir si l'IA changera les marchés financiers, mais si la prise de décision humaine peut survivre à ce changement.",
@@ -78,6 +97,107 @@
       "countryRequired": "Le pays est requis",
       "submitError": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer plus tard."
     }
+  },
+  "privacyPolicy": {
+    "title": "Politique de confidentialité",
+    "general": {
+      "title": "Général",
+      "p1": "Nous recevons vos données personnelles pour utiliser le Site Web et/ou le Service. Des informations détaillées sur le traitement de vos données personnelles sont fournies dans cette Politique de confidentialité.",
+      "p2": "Cette page vous informe de nos politiques concernant la collecte, l'utilisation et la divulgation des données personnelles lorsque vous, en tant qu'utilisateur de ce Site Web (ci-après «Vous» ou «Utilisateur»), utilisez ce Site Web.",
+      "p3": "En utilisant le Site Web, vous acceptez la collecte et l'utilisation d'informations conformément à cette politique. Sauf indication contraire dans cette Politique de confidentialité, les termes utilisés dans cette Politique de confidentialité ont les mêmes significations que dans nos conditions d'utilisation du Site Web."
+    },
+    "methods": {
+      "title": "Méthodes et principes de traitement des données personnelles",
+      "p1": "Nous respectons votre sécurité et traitons vos propres informations avec dignité, légalement et conformément à cette Politique de confidentialité et à la législation applicable. Si vous êtes dans l'Union européenne, nous traitons vos données personnelles conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données, et abrogeant la directive 95/46/CE (Règlement général sur la protection des données; \"RGPD\").",
+      "p2": "Afin d'éviter la divulgation et l'utilisation non autorisées de données personnelles qui n'ont pas l'autorité de divulguer ces données, ainsi que pour prévenir d'autres types de violations de la sécurité des données personnelles en cours de traitement, nous avons développé des mesures techniques et organisationnelles appropriées.",
+      "p3": "En cas de violation de la sécurité des données personnelles traitées, qui entraîne un risque élevé pour vos droits et libertés, nous vous informerons immédiatement de notre adresse e-mail.",
+      "p4": "Si vous n'avez pas donné votre consentement préalable, nous ne traiterons pas vos données personnelles."
+    },
+    "processed": {
+      "title": "Données personnelles traitées",
+      "p1": "Le traitement des données personnelles se produit après leur saisie dans le formulaire d'inscription sur le Site Web. Lors de la soumission du formulaire d'inscription, vous acceptez de conclure un accord avec nous aux termes duquel nous facilitons la communication entre le fournisseur de Produits et/ou Services (Annonceur) et vous, afin de traiter votre demande de conclusion d'un accord avec l'Annonceur pour l'achat de Services ou Produits annoncés sur le Site Web.",
+      "p2": "Les adresses IP et les cookies des utilisateurs de notre site Web sont collectés et traités par nous. Les cookies sont de petits morceaux de données envoyés par un serveur Web et stockés sur votre ordinateur, ces données nous aident à améliorer l'expérience de notre site Web. Vous pouvez refuser les cookies en les désactivant dans les paramètres de votre navigateur Web, cependant, restreindre l'utilisation des cookies peut affecter le fonctionnement de notre site Web.",
+      "p3": "Vous confirmez que toutes les données personnelles que vous fournissez sont à jour, véridiques et correctes. Vous êtes responsable de tout dommage causé par la fourniture d'informations personnelles incorrectes."
+    },
+    "processingMethods": {
+      "title": "Méthodes de traitement des données personnelles",
+      "p1": "Le traitement des données personnelles est effectué automatiquement. Le traitement des données personnelles est automatique, ce processus ne peut pas entraîner de conséquences juridiques, ni vous affecter de quelque manière que ce soit.",
+      "p2": "Le traitement des données personnelles peut être délégué à d'autres fournisseurs de services de messagerie en masse, processeurs et fournisseurs de services informatiques et cloud. De plus, nous pouvons déléguer tout ou partie du traitement au processeur, au fournisseur de services de messagerie en masse, au fournisseur de services informatiques et au fournisseur de services cloud. La sélection des processeurs est effectuée aussi soigneusement que possible afin que vos données personnelles soient protégées à tout moment pendant leur traitement.",
+      "p3": "Pour utiliser le Service, il est nécessaire de fournir vos données personnelles aux Annonceurs.",
+      "p4": "Les données peuvent être transférées dans n'importe quel État du monde. Les annonceurs et les processeurs sont les destinataires de vos données personnelles. Pour compléter le contrat entre nous, le transfert de vos données personnelles aux Annonceurs est requis, comme spécifié dans les Conditions. Le transfert des données personnelles a lieu en utilisant des précautions suffisantes pour garantir que vos données personnelles sont correctement protégées."
+    },
+    "legalBasis": {
+      "title": "Base juridique et périodes de traitement des données personnelles",
+      "p1": "Afin de vous fournir des Services de qualité, nous devons traiter les données personnelles que vous nous avez fournies dans le formulaire d'inscription ou donner ces données de toute autre manière. Le traitement des données est effectué pendant la période où nous vous fournissons des services conformément aux Conditions.",
+      "p2": "L'adresse IP, l'adresse e-mail et les informations dérivées des cookies sont traitées pour vous envoyer des notifications de services et produits liés au Site Web, ainsi que des informations sur les opportunités commerciales qui pourraient vous intéresser. Parmi les offres commerciales, vous pouvez trouver des annonceurs ou nos autres partenaires commerciaux. Le traitement des données personnelles est effectué selon votre consentement (marque dans le formulaire d'inscription). Vous avez le droit de retirer votre consentement à la collecte de données personnelles sans affecter la légalité du traitement basé sur un tel consentement avant sa révocation, ainsi que le traitement effectué sur d'autres bases juridiques que votre consentement. Le traitement de votre adresse e-mail à cette fin sera traité jusqu'à ce que vous retiriez votre consentement."
+    },
+    "rights": {
+      "title": "Droits des personnes concernées",
+      "intro": "Si le RGPD est applicable, vous avez les droits suivants de la personne concernée, sans s'y limiter :",
+      "rightsList": [
+        "Droit d'accès aux données personnelles (Article 15 du RGPD);",
+        "Droit de rectification (Article 16 du RGPD);",
+        "Droit à l'effacement (Article 17 du RGPD);",
+        "Droit à la limitation du traitement (Article 18 du RGPD);",
+        "Droit à la portabilité des données (Article 20 du RGPD);",
+        "Droit d'opposition (Article 21 du RGPD);",
+        "Droit de ne pas faire l'objet d'une décision basée uniquement sur un traitement automatisé, y compris le profilage, qui produit des effets juridiques concernant la personne concernée ou l'affecte de manière similaire (Article 22 du RGPD);",
+        "Droit de déposer une plainte auprès d'une autorité de contrôle (Article 77 du RGPD)."
+      ],
+      "p1": "Nous déclarons que nous ne sommes pas responsable au sens du règlement RGPD, dans la mesure où nous ne déterminons pas les finalités et les moyens du traitement des données personnelles, ce qui relève de la responsabilité de l'Annonceur.",
+      "p2": "Il convient de noter que dans les cas où nous ne sommes pas tenus d'être soumis au RGPD, nous ne sommes pas tenus de nous conformer à ces droits. Cependant, même dans ce cas, nous ferons de notre mieux pour satisfaire votre plainte ou demande. Avant d'agir sur votre demande, vous devrez peut-être vérifier votre identité, cette mesure est nécessaire pour protéger vos données personnelles, nous ne partageons donc pas vos données personnelles avec des tiers. Si vous refusez de nous fournir des informations qui nous permettent de vous identifier, nous ne pourrons pas traiter votre demande.",
+      "p3": "Cette Politique de confidentialité peut être modifiée ou complétée de temps à autre par nous unilatéralement. La nouvelle édition de la Politique de confidentialité entre en vigueur à partir du moment où elle est publiée sur le Site Web.",
+      "p4": "Veuillez noter que si vous continuez à utiliser le Site Web et le Service après tout changement de la Politique de confidentialité, cela signifie que vous acceptez et consentez à être lié par la nouvelle Politique de confidentialité. Si vous n'êtes pas d'accord avec tout changement dans cette Politique de confidentialité et ne souhaitez pas que vos informations y soient soumises, vous devrez cesser d'utiliser le Site Web et le Service.",
+      "p5": "Une réponse à votre demande peut être reçue dans les 40 (quarante) jours ouvrables à partir du moment où nous la recevons. Dans une situation où il est impossible de traiter votre demande, nous vous en informerons définitivement. Pour la communication, nous utilisons des moyens de communication électroniques, par exemple e-mail ou messagerie, si vous préférez une méthode de communication différente, veuillez nous en informer.",
+      "p6": "Nous fournirons toute communication et toute action gratuitement, cependant, lorsque cela est requis, nous pouvons vous facturer des frais raisonnables, en tenant compte des coûts administratifs et d'autres caractéristiques associées à la fourniture d'informations ou refuser d'agir sur demande.",
+      "p7": "Vous pouvez déposer une plainte liée à la protection des données personnelles auprès de l'organisme d'État approprié, demander une protection judiciaire si vous estimez que vos droits ont été violés. Vous pouvez également déposer toute plainte ou demande en nous contactant.",
+      "p8": "Si vous avez besoin de plus d'informations sur les autorités compétentes dans votre pays ou toute information de ce type, n'hésitez pas à nous contacter."
+    }
+  },
+  "termsOfUse": {
+    "title": "Conditions d'utilisation du site Web",
+    "general": {
+      "title": "Dispositions générales",
+      "p1": "En utilisant wtradvision.app (ci-après «Site Web»), vous acceptez de respecter ces conditions d'utilisation du Site Web, qui régissent les droits et obligations entre le propriétaire du domaine sur lequel ce Site Web est situé (ci-après «Opérateur»), et vous en tant qu'utilisateur de ce Site Web (ci-après «Vous» ou «Utilisateur»).",
+      "p2": "Ce domaine appartient à l'Opérateur sur la base de la propriété, la gestion opérationnelle de ce Site Web publicitaire est effectuée uniquement par l'Opérateur. Le Site Web vous fournit des informations sur les services et produits de notre(s) partenaire(s) (ci-après dénommé(s) «Annonceur(s)»). Le Site Web vous permet, en tant qu'utilisateur de ce Site Web, de postuler pour les produits ou services de l'Annonceur en utilisant ses sites Web (ci-après dénommé le «Service»). Les conditions d'utilisation du Site Web sont régies par les conditions d'utilisation du Site Web, qui sont publiées sur le Site Web (ci-après dénommées les \"Conditions\").",
+      "p3": "Le Site Web agit comme une plateforme d'information en ligne et comprend un service qui permet à l'Utilisateur de soumettre des demandes pour les Produits et/ou Services de l'Annonceur qui sont annoncés sur le Site Web ou en utilisant les sites Web de l'Annonceur (ci-après dénommé «Service») via sa plateforme de suivi (ci-après dénommée «Logiciel»).",
+      "p4": "L'Opérateur facilite uniquement la communication entre le fournisseur de produits et/ou services et l'Utilisateur. L'Opérateur n'est pas un fournisseur de services et/ou produits.",
+      "p5": "Lors de la soumission de toute information, vous acceptez les conditions d'utilisation du Site Web, en vertu desquelles nous vous fournissons des informations, afin de traiter votre demande de conclusion d'un accord entre vous et l'Annonceur pour l'achat de services ou de biens annoncés sur le Site Web ou en utilisant les sites Web de l'Annonceur."
+    },
+    "content": {
+      "title": "Contenu du site Web",
+      "p1": "Tous les matériaux, y compris les bannières, les matériaux vidéo et autres contenus affichés sur le Site Web (ci-après dénommés le «Contenu») sont fournis exclusivement à des fins publicitaires et informatives et ne doivent pas être utilisés à d'autres fins, tous les matériaux sont destinés uniquement à l'imitation ou à la modélisation. Le Contenu peut ne pas être précis et ne pas être basé sur des événements ou des faits réels précis, cependant, toutes les informations perçues du Contenu sous forme visuelle, orale ou écrite ne constituent pas des conseils financiers, juridiques, fiscaux ou autres conseils professionnels et ne sont pas destinées à remplacer une consultation avec un professionnel qualifié.",
+      "p2": "Tous les résultats présentés dans la méthodologie et/ou le système qui est disponible dans le Contenu n'indiquent pas nécessairement des résultats futurs. Aucune garantie n'est donnée, aucune déclaration n'est faite qu'un utilisateur recevra ou pourra recevoir des profits ou des pertes similaires à ceux indiqués dans le Contenu.",
+      "p3": "L'Utilisateur est dûment informé, comprend et reconnaît que l'Opérateur n'est pas autorisé à offrir des recommandations juridiques, comptables, d'investissement ou fiscales, ou des recommandations concernant la stratégie d'investissement, l'adéquation, la rentabilité ou d'autres questions."
+    },
+    "service": {
+      "title": "Utilisation du service",
+      "p1": "Pour vous inscrire sur le Site Web, vous pouvez avoir besoin d'un prénom, d'un nom, d'une adresse e-mail, d'un numéro de téléphone et d'un mot de passe. Un seul utilisateur autorisé peut avoir un compte, l'inscription de plusieurs comptes enregistrés par la même personne physique ou morale n'est pas autorisée et peut entraîner la fermeture par l'Opérateur de tous les comptes que l'Opérateur juge nécessaires. L'utilisation du Service est volontaire et gratuite.",
+      "p2": "En utilisant le Site Web, vous acceptez que votre identification et votre mot de passe soient gardés confidentiels et vous acceptez de ne pas utiliser le compte d'un autre utilisateur autorisé.",
+      "p3": "L'Opérateur n'est pas responsable de toute perte ou dommage résultant de votre non-respect de ces obligations, n'est pas responsable de tout dommage causé par le vol, le piratage ou toute autre utilisation non autorisée de votre mot de passe, données d'identification ou autres moyens d'identification.",
+      "p4": "Lors de l'inscription, l'Utilisateur est tenu de fournir à l'Opérateur des informations vraies, précises et complètes lors de l'inscription en les remplissant dans le formulaire d'inscription du Site Web."
+    },
+    "ipRights": {
+      "title": "Droits de propriété intellectuelle",
+      "p1": "Le droit d'auteur sur le Contenu appartient à la fois à l'Opérateur et à ses partenaires, et ils ne peuvent pas être stockés, copiés ou modifiés dans aucun format, vendus ou utilisés de quelque manière que ce soit en aucune circonstance, distribués ou transférés de quelque manière que ce soit sans autorisation spéciale de l'Opérateur.",
+      "p2": "L'Opérateur fournit à l'Utilisateur une licence personnelle, révocable, limitée, non exclusive, gratuite et non transférable pour utiliser le Site Web, le Logiciel et le Contenu à des fins personnelles uniquement."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "p1": "L'Utilisateur assume l'entière responsabilité et le risque pour l'utilisation du Site Web, du Contenu et du Logiciel. L'Opérateur fournit le Site Web, le Contenu et le Logiciel et les informations connexes sous la forme où ils sont et ne donne aucune garantie, représentation ou approbation expresse ou implicite.",
+      "p2": "L'Opérateur ne sera en aucun cas responsable envers toute partie pour toute perte directe, indirecte, implicite, punitive, spéciale, accessoire ou autre perte indirecte résultant directement ou indirectement de toute utilisation du Site Web, du Contenu et du Logiciel qui est fourni tel quel, et sans aucune garantie."
+    },
+    "other": {
+      "title": "Autre",
+      "p1": "Si l'Opérateur n'est pas en mesure d'insister ou d'assurer la mise en œuvre stricte de toute disposition de ces Conditions, cela doit être interprété comme une renonciation à toute disposition ou droit conformément à ces Conditions ou à la législation.",
+      "p2": "Les relations juridiques établies conformément à ces Conditions seront régies et interprétées conformément aux lois de Hong Kong.",
+      "p3": "Ces Conditions peuvent être modifiées ou complétées de temps à autre par l'Opérateur unilatéralement. La nouvelle édition des Conditions entre en vigueur à partir du moment où elles sont publiées sur le Site Web. Si l'Utilisateur n'est pas d'accord avec les nouvelles Conditions, il/elle cesse d'utiliser le Site Web et le Service."
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfUse": "Conditions d'utilisation",
+    "copyright": "© 2024 INFO Business — Tous droits réservés. Ceci est un article informatif."
   }
 }
 
