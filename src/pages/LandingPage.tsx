@@ -21,7 +21,7 @@ const LandingPage = () => {
             backgroundSize: '20px 20px'
           }}></div>
           <div className="container relative py-16 md:py-24 lg:py-32">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="max-w-4xl mx-auto text-left space-y-8">
               {/* Icon Badge */}
               <div className="flex justify-center mb-6">
                 <div className="relative">
@@ -33,16 +33,18 @@ const LandingPage = () => {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-foreground leading-tight">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-headline font-bold text-foreground leading-tight">
                 {t("landing.title")}
               </h1>
 
               {/* Content Section */}
-              <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:mt-1">
+              <div className="max-w-5xl mx-auto mt-8 text-left">
+                <p className="text-lg md:text-xl leading-7 text-news-body first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:leading-none mb-6">
                   {t("landing.content.p1")}
                 </p>
-                <p>{t("landing.content.p2")}</p>
+                <p className="text-lg md:text-xl leading-7 text-news-body">
+                  {t("landing.content.p2")}
+                </p>
               </div>
 
               {/* Feature Icons */}
