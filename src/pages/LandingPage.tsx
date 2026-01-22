@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Sparkles, TrendingUp, Users, Brain } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NewsHeader } from "@/components/news/NewsHeader";
 import { NewsFooter } from "@/components/news/NewsFooter";
@@ -22,16 +22,6 @@ const LandingPage = () => {
           }}></div>
           <div className="container relative py-16 md:py-24 lg:py-32">
             <div className="max-w-4xl mx-auto text-left space-y-8">
-              {/* Icon Badge */}
-              <div className="flex justify-center mb-6">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
-                  <div className="relative bg-primary/10 rounded-full p-4">
-                    <Brain className="w-12 h-12 md:w-16 md:h-16 text-primary" />
-                  </div>
-                </div>
-              </div>
-
               {/* Main Heading */}
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-headline font-bold text-foreground leading-tight">
                 {t("landing.title")}
@@ -45,42 +35,6 @@ const LandingPage = () => {
                 <p className="text-lg md:text-xl leading-7 text-news-body">
                   {t("landing.content.p2")}
                 </p>
-              </div>
-
-              {/* Feature Icons */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-2xl mx-auto">
-                <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-colors">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Sparkles className="w-6 h-6 text-primary" />
-                  </div>
-                  <span className="text-xs md:text-sm font-medium text-muted-foreground">
-                    {t("landing.features.healthcare")}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-colors">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <TrendingUp className="w-6 h-6 text-primary" />
-                  </div>
-                  <span className="text-xs md:text-sm font-medium text-muted-foreground">
-                    {t("landing.features.logistics")}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-colors">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
-                  <span className="text-xs md:text-sm font-medium text-muted-foreground">
-                    {t("landing.features.education")}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-colors">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Brain className="w-6 h-6 text-primary" />
-                  </div>
-                  <span className="text-xs md:text-sm font-medium text-muted-foreground">
-                    {t("landing.features.digital")}
-                  </span>
-                </div>
               </div>
 
               {/* Read More Button */}
