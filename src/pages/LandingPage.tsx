@@ -29,7 +29,7 @@ const LandingPage = () => {
 
               {/* Content Section */}
               <div className="max-w-5xl mx-auto mt-8 text-left">
-                <p className="text-lg md:text-xl leading-7 text-news-body drop-cap-aligned first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:leading-none mb-6">
+                <p className="text-lg md:text-xl leading-7 text-news-body drop-cap-aligned first-letter:text-5xl first-letter:font-headline first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:leading-none mb-6">
                   {t("landing.content.p1")}
                 </p>
                 <p className="text-lg md:text-xl leading-7 text-news-body mb-6">
