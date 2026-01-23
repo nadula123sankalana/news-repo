@@ -124,6 +124,12 @@
     @apply text-news-body leading-relaxed;
   }
 
+  .drop-cap-aligned::first-letter {
+    line-height: 0.75;
+    padding-top: 0;
+    margin-top: -0.05em;
+  }
+
   .landing-newspaper-content {
     /* Newspaper-style multi-column layout for landing page paragraphs */
     column-count: 1;

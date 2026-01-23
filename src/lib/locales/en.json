@@ -1,9 +1,10 @@
 {
   "landing": {
-    "title": "AI in France: how artificial intelligence is being adopted across different sectors",
+    "title": "AI in France: how artificial intelligence is being adopted in different sectors",
     "content": {
-      "p1": "Artificial intelligence is increasingly being used worldwide across areas such as healthcare, logistics, education, and digital services. Rather than focusing only on automation, many newer systems are designed to help organize and present complex information more clearly.",
-      "p2": "Across Europe, including France, there has been growing interest in how AI-assisted platforms are beginning to influence the way people explore and understand systems, especially for those who are not technically experienced and prefer simpler explanations."
+      "p1": "Artificial intelligence is increasingly used worldwide in fields such as healthcare, logistics, education, and digital services. Rather than focusing solely on automation, many newer systems are designed to help organize and present complex information more clearly.",
+      "p2": "Further to this, across Europe including France there has been growing interest in how AI-assisted platforms are beginning to influence the way people explore and understand complex systems, particularly among individuals who are not technically experienced and prefer simpler explanations.",
+      "p3": "In the next section, one such platform is briefly examined to illustrate how this approach is being applied in practice."
     },
     "features": {
       "healthcare": "Healthcare",

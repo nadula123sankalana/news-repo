@@ -29,11 +29,14 @@ const LandingPage = () => {
 
               {/* Content Section */}
               <div className="max-w-5xl mx-auto mt-8 text-left">
-                <p className="text-lg md:text-xl leading-7 text-news-body first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:leading-none mb-6">
+                <p className="text-lg md:text-xl leading-7 text-news-body drop-cap-aligned first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:leading-none mb-6">
                   {t("landing.content.p1")}
                 </p>
-                <p className="text-lg md:text-xl leading-7 text-news-body">
+                <p className="text-lg md:text-xl leading-7 text-news-body mb-6">
                   {t("landing.content.p2")}
+                </p>
+                <p className="text-lg md:text-xl leading-7 text-news-body">
+                  {t("landing.content.p3")}
                 </p>
               </div>
 
@@ -48,20 +51,12 @@ const LandingPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
-
-              {/* Scroll Indicator */}
-              <div className="pt-8 flex flex-col items-center gap-2 text-xs text-muted-foreground">
-                <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2">
-                  <div className="w-1.5 h-1.5 bg-muted-foreground/50 rounded-full animate-bounce"></div>
-                </div>
-                <span>{t("landing.scrollHint")}</span>
-              </div>
             </div>
           </div>
         </div>
 
         {/* Additional Info Section */}
-        <div className="container py-16 md:py-24">
+        <div className="container pt-8 pb-16 md:pt-12 md:pb-24">
           <div className="max-w-3xl mx-auto">
             <div className="bg-card border border-border rounded-lg p-8 md:p-12 shadow-sm">
               <div className="space-y-4 text-center">
